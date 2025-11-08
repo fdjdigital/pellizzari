@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Geral - Pellizzari Advocacia Estratégica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-profundo: #001527;
+            --dourado-fosco: #B6A281;
+            --branco: #ffffff;
+            --cinza-claro: #f8f9fa;
+            --cinza-medio: #6c757d;
+            --cinza-escuro: #343a40;
+            --fonte-principal: 'Inter', sans-serif;
+            --fonte-display: 'Playfair Display', serif;
+            --border-radius-md: 10px;
+            --border-radius-lg: 15px;
+            --border-radius-pill: 30px;
+            --sombra-media: 0 5px 15px rgba(0, 21, 39, 0.08);
+            --sombra-hover: 0 15px 40px rgba(0, 21, 39, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fonte-principal);
+            background: var(--cinza-claro);
+            min-height: 100vh;
+        }
+
+        .header {
+            background: var(--azul-profundo);
+            padding: 1.5rem 2rem;
+            box-shadow: var(--sombra-media);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .logo {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .header h1 {
+            font-family: var(--fonte-display);
+            color: var(--branco);
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius-pill);
+            font-family: var(--fonte-principal);
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-back {
+            background: var(--dourado-fosco);
+            color: var(--azul-profundo);
+        }
+
+        .btn-back:hover {
+            background: var(--branco);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .btn-home {
+            background: transparent;
+            color: var(--branco);
+            border: 2px solid var(--branco);
+        }
+
+        .btn-home:hover {
+            background: var(--branco);
+            color: var(--azul-profundo);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .dashboard-info {
+            background: var(--branco);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--sombra-media);
+            margin-bottom: 2rem;
+        }
+
+        .dashboard-info h2 {
+            font-family: var(--fonte-display);
+            color: var(--azul-profundo);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dashboard-info p {
+            color: var(--cinza-medio);
+            font-size: 0.95rem;
+        }
+
+        .dashboard-container {
+            background: var(--branco);
+            padding: 2rem;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--sombra-media);
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: var(--border-radius-md);
+        }
+
+        .iframe-wrapper iframe {
+            width: 100%;
+            min-height: 600px;
+            border: none;
+            border-radius: var(--border-radius-md);
+        }
+
+        .loading {
+            text-align: center;
+            padding: 3rem;
+            color: var(--cinza-medio);
+        }
+
+        .loading::after {
+            content: '...';
+            animation: dots 1.5s steps(4, end) infinite;
+        }
+
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60%, 100% { content: '...'; }
+        }
+
+        .unauthorized {
+            text-align: center;
+            padding: 3rem;
+            background: var(--branco);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--sombra-media);
+        }
+
+        .unauthorized h2 {
+            color: var(--azul-profundo);
+            font-family: var(--fonte-display);
+            margin-bottom: 1rem;
+        }
+
+        .unauthorized p {
+            color: var(--cinza-medio);
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .logo-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            .logo {
+                max-width: 120px;
+            }
+
+            .header h1 {
+                font-size: 1.2rem;
+            }
+
+            .header-buttons {
+                width: 100%;
+            }
+
+            .btn {
+                flex: 1;
+                text-align: center;
+            }
+
+            .container {
+                padding: 0 1rem;
+                margin: 1rem auto;
+            }
+
+            .dashboard-container {
+                padding: 1rem;
+            }
+
+            .iframe-wrapper iframe {
+                min-height: 500px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .iframe-wrapper iframe {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="/images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="logo">
+                <h1>📈 Dashboard Geral</h1>
+            </div>
+            <div class="header-buttons">
+                <a href="/dash/" class="btn btn-back">← Voltar aos Dashboards</a>
+                <a href="/" class="btn btn-home">🏠 Site Principal</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="content">
+            <!-- Conteúdo será inserido via JavaScript após verificação de auth -->
+        </div>
+    </div>
+
+    <script>
+        // Verifica autenticação
+        function checkAuth() {
+            const isAuthenticated = sessionStorage.getItem('dashAuth') === 'true';
+            const contentDiv = document.getElementById('content');
+
+            if (!isAuthenticated) {
+                contentDiv.innerHTML = `
+                    <div class="unauthorized">
+                        <h2>🔒 Acesso Restrito</h2>
+                        <p>Você precisa fazer login para acessar este dashboard.</p>
+                        <a href="/dash/" class="btn btn-back">Fazer Login</a>
+                    </div>
+                `;
+            } else {
+                contentDiv.innerHTML = `
+                    <div class="dashboard-info">
+                        <h2>Visão Consolidada</h2>
+                        <p>Acompanhe métricas de todas as plataformas em um único lugar.</p>
+                    </div>
+                    <div class="dashboard-container">
+                        <div class="loading">Carregando dashboard</div>
+                        <div class="iframe-wrapper">
+                            <iframe
+                                title="Dashboard Geral - Reportei"
+                                src="https://app.reportei.com/embed/uOV13IB7JYXuDIw8971H6bLV4YJXoclJ"
+                                frameborder="0"
+                                style="border:0"
+                                allowfullscreen
+                                onload="document.querySelector('.loading').style.display='none'">
+                            </iframe>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Verifica ao carregar a página
+        window.addEventListener('DOMContentLoaded', checkAuth);
+    </script>
+</body>
+</html>
