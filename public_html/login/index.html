@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Pellizzari Advocacia Estratégica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --azul-profundo: #001527;
+            --dourado-fosco: #B6A281;
+            --branco: #ffffff;
+            --cinza-claro: #f8f9fa;
+            --cinza-medio: #6c757d;
+            --cinza-escuro: #343a40;
+            --fonte-principal: 'Inter', sans-serif;
+            --fonte-display: 'Playfair Display', serif;
+            --border-radius-md: 10px;
+            --border-radius-lg: 15px;
+            --border-radius-pill: 30px;
+            --sombra-media: 0 5px 15px rgba(0, 21, 39, 0.08);
+            --sombra-hover: 0 15px 40px rgba(0, 21, 39, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fonte-principal);
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: var(--branco);
+            border-radius: var(--border-radius-lg);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            width: 100%;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .logo {
+            max-width: 200px;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-family: var(--fonte-display);
+            color: var(--azul-profundo);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: var(--cinza-medio);
+            margin-bottom: 2rem;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            color: var(--azul-profundo);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        input[type="password"] {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--cinza-claro);
+            border-radius: var(--border-radius-md);
+            font-family: var(--fonte-principal);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input[type="password"]:focus {
+            outline: none;
+            border-color: var(--dourado-fosco);
+            box-shadow: 0 0 0 3px rgba(182, 162, 129, 0.1);
+        }
+
+        .btn {
+            width: 100%;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: var(--border-radius-pill);
+            font-family: var(--fonte-principal);
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: var(--dourado-fosco);
+            color: var(--azul-profundo);
+        }
+
+        .btn-primary:hover {
+            background: var(--azul-profundo);
+            color: var(--branco);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--azul-profundo);
+            border: 2px solid var(--azul-profundo);
+            margin-top: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background: var(--azul-profundo);
+            color: var(--branco);
+        }
+
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 0.75rem;
+            border-radius: var(--border-radius-md);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .dashboard-links {
+            display: none;
+        }
+
+        .dashboard-links.show {
+            display: block;
+        }
+
+        .dashboard-link {
+            display: block;
+            background: var(--cinza-claro);
+            padding: 1.5rem;
+            border-radius: var(--border-radius-md);
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: var(--azul-profundo);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .dashboard-link:hover {
+            background: var(--dourado-fosco);
+            border-color: var(--azul-profundo);
+            transform: translateX(5px);
+            box-shadow: var(--sombra-media);
+        }
+
+        .dashboard-link h3 {
+            font-family: var(--fonte-display);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .dashboard-link p {
+            color: var(--cinza-medio);
+            font-size: 0.9rem;
+        }
+
+        .login-form {
+            display: block;
+        }
+
+        .login-form.hide {
+            display: none;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--branco);
+            color: var(--azul-profundo);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius-pill);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: var(--sombra-media);
+        }
+
+        .back-btn:hover {
+            background: var(--dourado-fosco);
+            transform: translateY(-2px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .back-btn {
+                top: 10px;
+                left: 10px;
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="back-btn">← Voltar ao Site</a>
+
+    <div class="container">
+        <img src="/images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="logo">
+
+        <!-- Login Form -->
+        <div class="login-form" id="loginForm">
+            <h1>Área Restrita</h1>
+            <p class="subtitle">Acesso aos Dashboards</p>
+
+            <div class="error-message" id="errorMessage">
+                Senha incorreta. Tente novamente.
+            </div>
+
+            <form id="loginFormElement">
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Acessar</button>
+            </form>
+        </div>
+
+        <!-- Dashboard Links -->
+        <div class="dashboard-links" id="dashboardLinks">
+            <h1>Dashboards</h1>
+            <p class="subtitle">Escolha o relatório que deseja visualizar</p>
+
+            <a href="/dash/trafego-pago/" class="dashboard-link">
+                <h3>📊 Tráfego Pago</h3>
+                <p>Análise completa de campanhas de mídia paga</p>
+            </a>
+
+            <a href="/dash/geral/" class="dashboard-link">
+                <h3>📈 Dashboard Geral</h3>
+                <p>Visão consolidada de todas as plataformas</p>
+            </a>
+
+            <button type="button" class="btn btn-secondary" onclick="logout()">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        // Configuração de senha (em produção, isso deve estar no backend)
+        const SENHA_CORRETA = 'pellizzari2025';
+
+        // Verifica se já está autenticado
+        window.addEventListener('DOMContentLoaded', () => {
+            checkAuth();
+        });
+
+        // Função para verificar autenticação
+        function checkAuth() {
+            const isAuthenticated = sessionStorage.getItem('dashAuth') === 'true';
+            if (isAuthenticated) {
+                showDashboard();
+            }
+        }
+
+        // Handler do formulário de login
+        document.getElementById('loginFormElement').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const senha = document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (senha === SENHA_CORRETA) {
+                sessionStorage.setItem('dashAuth', 'true');
+                showDashboard();
+                errorMessage.classList.remove('show');
+            } else {
+                errorMessage.classList.add('show');
+                document.getElementById('password').value = '';
+                document.getElementById('password').focus();
+            }
+        });
+
+        // Mostrar dashboard
+        function showDashboard() {
+            document.getElementById('loginForm').classList.add('hide');
+            document.getElementById('dashboardLinks').classList.add('show');
+        }
+
+        // Função de logout
+        function logout() {
+            sessionStorage.removeItem('dashAuth');
+            document.getElementById('loginForm').classList.remove('hide');
+            document.getElementById('dashboardLinks').classList.remove('show');
+            document.getElementById('password').value = '';
+        }
+    </script>
+</body>
+</html>

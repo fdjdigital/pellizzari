@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pellizzari - Estratégia Jurídica | Advocacia para Empresários Visionários</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-profundo: #001527;
+            --dourado-fosco: #B6A281;
+            --branco: #ffffff;
+            --cinza-claro: #f8f9fa;
+            --cinza-medio: #6c757d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--azul-profundo);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Ícones sofisticados */
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .icon-large {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+        }
+
+        .icon-target {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='6'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-warning {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc3545' stroke-width='2'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cpath d='M12 9v4'/%3E%3Cpath d='m12 17 .01 0'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-x {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc3545' stroke-width='2'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-check {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-lightbulb {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpath d='M9 21h6'/%3E%3Cpath d='M12 17h.01'/%3E%3Cpath d='M12 3a4 4 0 0 1 4 4c0 1.5-.5 2-1 3l-1 1c-.5.5-1 1.5-1 2.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5c0-1 .5-1.5 1-2l1-1c.5-1 1-1.5 1-3a4 4 0 0 0-8 0c0 1.5.5 2 1 3l1 1c.5.5 1 1.5 1 2.5a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5c0-1 .5-1.5 1-2l1-1c.5-1 1-1.5 1-3a4 4 0 0 1 4-4Z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-user {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-trophy {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpath d='M6 9H4.5a2.5 2.5 0 0 1 0-5H6'/%3E%3Cpath d='M18 9h1.5a2.5 2.5 0 0 0 0-5H18'/%3E%3Cpath d='M4 22h16'/%3E%3Cpath d='M10 14.66V17c0 .55.47.98.97 1.21C12.25 18.75 14 20 16 20s3.75-1.25 5.03-1.79c.5-.23.97-.66.97-1.21v-2.34c0-1.06-.93-2.11-2.08-2.3L18 12.65C17.29 12.55 16.44 12 16 11.5c-.44-.5-1.29.05-2 .15L12 12.65c-1.15.19-2.08 1.24-2.08 2.3l.08.01Z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-handshake {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpath d='m11 17 2 2a1 1 0 1 0 3-3l-2.5-2.5a1 1 0 0 1 3-3l2.5 2.5a1 1 0 0 0 3-3L13 3a1 1 0 0 0-3 3l2.5 2.5a1 1 0 0 1-3 3L7 9a1 1 0 0 0-3 3l2.5 2.5a1 1 0 0 1-3 3l2.5 2.5'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-shield {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-clock {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23dc3545' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12,6 12,12 16,14'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-zap {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpolygon points='13,2 3,14 12,14 11,22 21,10 12,10 13,2'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-arrow-down {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2'%3E%3Cline x1='12' y1='5' x2='12' y2='19'/%3E%3Cpolyline points='19,12 12,19 5,12'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .icon-lock {
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Crect width='18' height='11' x='3' y='11' rx='2' ry='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
+            color: var(--branco);
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://rebecasaidel.com/wp-content/uploads/2025/05/Imagem-1.1.webp') center/cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .logo-3d {
+            max-width: 250px;
+            height: auto;
+            margin: 0 auto 2rem;
+            display: block;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 21, 39, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-3d:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0, 21, 39, 0.25);
+        }
+
+        .pce-badge {
+            background: var(--dourado-fosco);
+            color: var(--azul-profundo);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .main-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: var(--dourado-fosco);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            padding: 4rem 0;
+            background: var(--cinza-claro);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--azul-profundo);
+            text-align: center;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .problem-card {
+            background: var(--branco);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 21, 39, 0.1);
+            border-left: 4px solid var(--dourado-fosco);
+        }
+
+        .problem-icon {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 4rem 0;
+            background: var(--branco);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            background: var(--cinza-claro);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 21, 39, 0.08);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            border: 4px solid var(--dourado-fosco);
+        }
+
+        .member-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--azul-profundo);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .member-title {
+            color: var(--dourado-fosco);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .member-details {
+            text-align: left;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .member-details li {
+            margin-bottom: 0.8rem;
+            list-style: none;
+            position: relative;
+            padding-left: 2rem;
+            display: block;
+        }
+
+        .member-details li::before {
+            content: '';
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23B6A281' stroke-width='2'%3E%3Cpolyline points='20,6 9,17 4,12'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+            margin-top: 2px;
+            flex-shrink: 0;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        .member-detail-label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .member-detail-text {
+            display: block;
+            color: var(--cinza-medio);
+        }
+
+        /* Diagnostic Section */
+        .diagnostic-section {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
+            color: var(--branco);
+            position: relative;
+        }
+
+        .diagnostic-content {
+            text-align: center;
+        }
+
+        .diagnostic-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .diagnostic-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .benefit-icon {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 4rem 0;
+            background: var(--dourado-fosco);
+            color: var(--azul-profundo);
+            text-align: center;
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .offer-details {
+            font-size: 1.2rem;
+            margin: 2rem 0;
+        }
+
+        .price-strike {
+            text-decoration: line-through;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .price-free {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--azul-profundo);
+            margin-left: 1rem;
+        }
+
+        /* CTA Button - Botão interativo e pulsante */
+        .cta-button {
+            background: var(--azul-profundo);
+            color: var(--branco);
+            padding: 1.2rem 3rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+
+        /* Animação de pulso contínua */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 21, 39, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(0, 21, 39, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 21, 39, 0);
+            }
+        }
+
+        /* Efeito ao passar o mouse */
+        .cta-button:hover {
+            background: #003366;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0, 21, 39, 0.4);
+            animation: none; /* Para a animação de pulso ao fazer hover */
+        }
+
+        /* Animação de clique */
+        .cta-button:active {
+            transform: translateY(-1px) scale(1.02);
+            transition: transform 0.1s;
+        }
+
+        /* Efeito de brilho */
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+            border-radius: 50px;
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Experience Section */
+        .experience-section {
+            padding: 4rem 0;
+            background: var(--cinza-claro);
+        }
+
+        .experience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .experience-card {
+            background: var(--branco);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 21, 39, 0.1);
+        }
+
+        .experience-icon {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        /* Why Choose Section */
+        .why-choose {
+            padding: 4rem 0;
+            background: var(--branco);
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .reason-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .reason-icon {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .reason-title {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--azul-profundo);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            padding: 4rem 0;
+            background: var(--azul-profundo);
+            color: var(--branco);
+            text-align: center;
+        }
+
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            color: var(--dourado-fosco);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--azul-profundo);
+            color: var(--branco);
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 1px solid var(--dourado-fosco);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .diagnostic-title {
+                font-size: 2.2rem;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .cta-title {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .member-name {
+                font-size: 1.5rem;
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+            }
+
+            .member-title {
+                font-size: 1rem;
+                text-align: center;
+                line-height: 1.4;
+            }
+
+            .member-details {
+                text-align: left;
+                font-size: 0.9rem;
+            }
+
+            .member-details li {
+                padding-left: 1.8rem;
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+
+            .member-detail-label {
+                font-size: 0.85rem;
+            }
+
+            .member-detail-text {
+                font-size: 0.85rem;
+                line-height: 1.5;
+            }
+            
+            .quote-text {
+                font-size: 1.4rem;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Urgency indicator */
+        .urgency-indicator {
+            background: #dc3545;
+            color: white;
+            padding: 0.3rem 1rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 1rem;
+            animation: pulse-red 2s infinite;
+        }
+
+        @keyframes pulse-red {
+            0% {
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.5);
+            }
+            70% {
+                box-shadow: 0 0 0 8px rgba(220, 53, 69, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="pce-badge">
+                    <span class="icon icon-target"></span>
+                    EXCLUSIVO PARA PARTICIPANTES DO PCE
+                </div>
+                <h1 class="main-title">Empresários Visionários Precisam de<br>Estratégia Jurídica à Altura</h1>
+                <p class="subtitle">Advocacia Estratégica Para Empresários Que Exigem Resultados Excepcionais</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Value Proposition -->
+    <section class="value-prop">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon icon-warning icon-large"></span>
+                A Realidade Que Todo Empresário do PCE Precisa Saber
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem;">
+                <strong>Enquanto você está focado em multiplicar vendas</strong>, sua empresa pode estar:
+            </p>
+            
+            <div class="problems-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <span class="icon icon-x icon-large"></span>
+                    </div>
+                    <h3>Perdendo Milhares em Tributos</h3>
+                    <p>Tributos que poderiam ser legalmente otimizados, impactando diretamente seu resultado</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <span class="icon icon-x icon-large"></span>
+                    </div>
+                    <h3>Correndo Riscos Jurídicos</h3>
+                    <p>Vulnerabilidades que podem destruir tudo que você construiu com tanto esforço</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <span class="icon icon-x icon-large"></span>
+                    </div>
+                    <h3>Sem Blindagem Patrimonial</h3>
+                    <p>Ausência de proteção adequada para seus bens pessoais e empresariais</p>
+                </div>
+                <div class="problem-card">
+                    <div class="problem-icon">
+                        <span class="icon icon-x icon-large"></span>
+                    </div>
+                    <h3>Fora de Compliance</h3>
+                    <p>Desconformidade com LGPD e outras regulamentações essenciais</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; background: var(--branco); padding: 2rem; border-radius: 15px; margin-top: 3rem; border-left: 5px solid #dc3545;">
+                <h3 style="color: #dc3545; font-size: 1.5rem; margin-bottom: 1rem;">O Resultado?</h3>
+                <p style="font-size: 1.2rem; font-weight: 600;">
+                    <strong>Empresários que faturam milhões, mas operam como pequenos negócios</strong> - sem a proteção e otimização que sua empresa merece.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="icon icon-target icon-large"></span>
+                Pellizzari Estratégia Jurídica
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">
+                <strong>Somos o braço jurídico</strong> que empresários visionários como você precisam para transformar complexidade jurídica em <strong>vantagem competitiva</strong>.
+            </p>
+
+            <div class="team-grid">
+<div class="team-member">
+                    <img src="https://rebecasaidel.com/wp-content/uploads/2025/05/Reginaldo.png" alt="Reginaldo Pellizzari" class="member-photo">
+                    <h3 class="member-name">
+                        <span class="icon icon-user"></span>
+                        Reginaldo Pellizzari
+                    </h3>
+                    <p class="member-title">Advogado - Especialista em Planejamento Tributário Estratégico</p>
+                    <ul class="member-details">
+                        <li>
+                            <span class="member-detail-text">Consultoria Tributária</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Planejamento Tributário</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Revisão Fiscal e Recuperação de Créditos</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Redução Legal da Carga Tributária</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Monitoramento Legislativo</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Análise de Blindagem Patrimonial</span>
+                        </li>
+                        <li>
+                            <span class="member-detail-text">Otimização Fiscal</span>
+                        </li>
+                    </ul>
+                </div>
+
+<div class="team-member">
+                    <img src="https://rebecasaidel.com/wp-content/uploads/2025/05/Viviane.png" alt="Viviane Pellizzari" class="member-photo">
+                    <h3 class="member-name">
+                        <span class="icon icon-user"></span>
+                        Viviane Pellizzari
+                    </h3>
+                    <p class="member-title">Advogada Empresarial e Consultiva</p>
+                    
+                    <div style="text-align: left; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6;">
+                        <p>Atua como parceira estratégica do empresário, oferecendo suporte jurídico para garantir segurança nas decisões e fortalecer a estrutura da empresa.</p>
+                    </div>
+
+                    <div style="text-align: left;">
+                        <h4 style="color: var(--dourado-fosco); font-weight: 600; margin-bottom: 0.8rem; font-size: 0.9rem;">ESPECIALIDADES EMPRESARIAIS:</h4>
+                        <ul class="member-details" style="margin-bottom: 1.5rem;">
+                            <li><span class="member-detail-text">Constituição e reorganização de empresas</span></li>
+                            <li><span class="member-detail-text">Elaboração e revisão de contratos comerciais</span></li>
+                            <li><span class="member-detail-text">Implantação de governança e compliance</span></li>
+                            <li><span class="member-detail-text">Consultoria preventiva personalizada</span></li>
+                            <li><span class="member-detail-text">Resolução de conflitos empresariais</span></li>
+                        </ul>
+
+                        <h4 style="color: var(--dourado-fosco); font-weight: 600; margin-bottom: 0.8rem; font-size: 0.9rem;">ESPECIALIDADES TRABALHISTAS:</h4>
+                        <ul class="member-details" style="margin-bottom: 1.5rem;">
+                            <li><span class="member-detail-text">Auditoria Trabalhista Preventiva</span></li>
+                            <li><span class="member-detail-text">Adequação à Legislação Trabalhista</span></li>
+                            <li><span class="member-detail-text">Gestão de Passivos Trabalhistas</span></li>
+                            <li><span class="member-detail-text">Representação em Negociações</span></li>
+                            <li><span class="member-detail-text">Consultoria Contínua e Estratégica</span></li>
+                        </ul>
+
+                        <h4 style="color: var(--dourado-fosco); font-weight: 600; margin-bottom: 0.8rem; font-size: 0.9rem;">DIFERENCIAIS:</h4>
+                        <ul class="member-details">
+                            <li><span class="member-detail-text">Aplicação do DES na empresa</span></li>
+                            <li><span class="member-detail-text">Atendimento personalizado e consultivo</span></li>
+                            <li><span class="member-detail-text">Suporte para Dúvidas Diárias</span></li>
+                            <li><span class="member-detail-text">Atuação preventiva e estratégica</span></li>
+                            <li><span class="member-detail-text">Equipe atualizada com normas e jurisprudências</span></li>
+                            <li><span class="member-detail-text">Uso de tecnologia e automação para agilidade</span></li>
+                        </ul>
+                    </div>
+                </div>
+    </section>
+
+    <!-- Diagnostic Section -->
+    <section class="diagnostic-section">
+        <div class="container">
+            <div class="diagnostic-content">
+                <h2 class="diagnostic-title">
+                    Diagnóstico Empresarial Estratégico
+                </h2>
+                <p style="font-size: 1.3rem; color: var(--dourado-fosco); margin-bottom: 2rem;">
+                    Especial para Participantes do PCE
+                </p>
+                <p style="font-size: 1.2rem; margin-bottom: 3rem;">
+                    <strong>No Diagnóstico Estratégico, você descobre:</strong>
+                </p>
+
+                <div class="diagnostic-benefits">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <span class="icon icon-check icon-large"></span>
+                        </div>
+                        <h4>Análise Tributária</h4>
+                        <p>Seu regime atual vs. regime optimal</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <span class="icon icon-check icon-large"></span>
+                        </div>
+                        <h4>Mapeamento de Riscos Jurídicos</h4>
+                        <p>Vulnerabilidades que ameaçam seu patrimônio</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <span class="icon icon-check icon-large"></span>
+                        </div>
+                        <h4>Oportunidades de Blindagem</h4>
+                        <p>Como proteger legalmente seu negócio</p>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <span class="icon icon-check icon-large"></span>
+                        </div>
+                        <h4>Plano de Ação Prioritário</h4>
+                        <p>Próximos passos para otimização total</p>
+                    </div>
+                </div>
+
+                <p style="font-size: 1.2rem; margin-top: 2rem;">
+                    <strong>Para Empresários Que Faturam Acima de R$ 500K/Ano</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience-section">
+        <div class="container">
+            <h2 class="section-title">
+                Experiências Relevantes
+            </h2>
+            
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3>Assessoria Jurídica Completa para Grupo Empresarial</h3>
+                    <p>Estruturação societária e tributária para holding com múltiplas empresas</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3>Consultoria em Compliance Digital</h3>
+                    <p>Adequação completa à LGPD para empresa de tecnologia</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3>Planejamento Tributário Estratégico</h3>
+                    <p>Otimização fiscal para indústria com regime tributário especial</p>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3>Blindagem Patrimonial Empresarial</h3>
+                    <p>Proteção de ativos para empresário de alto patrimônio</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="urgency-indicator">
+                <span class="icon icon-clock"></span>
+                OFERTA EXCLUSIVA PCE - APENAS 48 HORAS
+            </div>
+            <h2 class="cta-title">
+                <span class="icon icon-target icon-large"></span>
+                Diagnóstico Empresarial Estratégico
+            </h2>
+            
+            <div class="offer-details">
+                <span class="price-strike">De R$ 3.500</span>
+                <span class="price-free">GRATUITO</span>
+            </div>
+
+            <div style="background: rgba(0, 21, 39, 0.1); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
+                <h3 style="margin-bottom: 1rem;">Inclui:</h3>
+                <ul style="text-align: left; max-width: 500px; margin: 0 auto;">
+                    <li>Análise tributária comparativa (atual vs. optimal)</li>
+                    <li>Mapeamento de riscos jurídicos</li>
+                    <li>Estratégia de blindagem patrimonial</li>
+                    <li>Plano de ação com prioridades definidas</li>
+                </ul>
+            </div>
+
+            <a href="https://digitalcoopera.activehosted.com/f/58" target="_blank" class="cta-button">
+                <span class="icon icon-arrow-down"></span>
+                QUERO MEU DIAGNÓSTICO GRATUITO
+            </a>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose">
+        <div class="container">
+            <h2 class="section-title">
+                Por Que Empresários do PCE Escolhem a Pellizzari?
+            </h2>
+            
+            <div class="reasons-grid">
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3 class="reason-title">Experiência Sólida</h3>
+                    <p>Mais de 25 anos somados de prática jurídica empresarial</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3 class="reason-title">Formação Especializada</h3>
+                    <p>Pós-graduações específicas em áreas estratégicas do direito empresarial</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3 class="reason-title">Visão Empresarial</h3>
+                    <p>Compreendemos ROI, KPIs e resultados mensuráveis</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3 class="reason-title">Abordagem Estratégica</h3>
+                    <p>Não apenas cumprimos leis, criamos vantagens competitivas</p>
+                </div>
+                <div class="reason-card">
+                    <div class="reason-icon">
+                        <span class="icon icon-check icon-large"></span>
+                    </div>
+                    <h3 class="reason-title">Foco em Resultados</h3>
+                    <p>Cada decisão jurídica visa impactar positivamente seu bottom line</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                <span class="icon icon-zap icon-large"></span>
+                Nossa Abordagem Funciona
+            </h2>
+            <blockquote class="quote-text">
+                "A diferença está na visão estratégica. Não somos apenas advogados que cumprem leis - somos estrategistas que transformam complexidade jurídica em vantagem competitiva real."
+            </blockquote>
+            <div class="quote-author">
+                <strong>Reginaldo & Viviane Pellizzari</strong><br>
+                Pellizzari Estratégia Jurídica
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">
+                <span class="icon icon-target icon-large"></span>
+                Ação Imediata
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                <strong>Empresários do PCE que agem rápido, colhem resultados primeiro.</strong>
+            </p>
+            <p style="margin-bottom: 2rem;">
+                Enquanto outros ainda estão <strong>"pensando"</strong>, você já estará com sua estrutura jurídica <strong>blindada e otimizada</strong>.
+            </p>
+            
+            <a href="https://digitalcoopera.activehosted.com/f/58" target="_blank" class="cta-button">
+                <span class="icon icon-arrow-down"></span>
+                AGENDAR DIAGNÓSTICO AGORA
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p style="font-style: italic; margin-bottom: 1rem;">
+                "Transformamos complexidade jurídica em vantagem competitiva para empresários que não aceitam mediocridade."
+            </p>
+            <p><strong>Pellizzari Estratégia Jurídica</strong></p>
+            <p>Advocacia para Empresários Visionários</p>
+            <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--dourado-fosco);">
+                <p style="font-size: 0.9rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <span class="icon icon-lock"></span>
+                    Seus dados estão seguros - LGPD Compliant
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation on scroll
+        window.addEventListener('scroll', function() {
+            const elements = document.querySelectorAll('.problem-card, .team-member, .experience-card, .reason-card');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('fade-in-up');
+                }
+            });
+        });
+
+        // Enhanced CTA button interactions
+        document.querySelectorAll('.cta-button').forEach(button => {
+            // Efeito de ripple ao clicar
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.classList.add('ripple');
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+
+            // Feedback visual melhorado
+            button.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.05)';
+            });
+
+            button.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Efeito de contagem regressiva para urgência
+        let timeLeft = 48 * 60 * 60; // 48 horas em segundos
+        
+        function updateCountdown() {
+            const hours = Math.floor(timeLeft / 3600);
+            const minutes = Math.floor((timeLeft % 3600) / 60);
+            const seconds = timeLeft % 60;
+            
+            const urgencyElements = document.querySelectorAll('.urgency-indicator');
+            urgencyElements.forEach(element => {
+                if (timeLeft > 0) {
+                    element.innerHTML = `
+                        <span class="icon icon-clock"></span>
+                        OFERTA EXCLUSIVA PCE - ${hours}h ${minutes}m ${seconds}s restantes
+                    `;
+                } else {
+                    element.innerHTML = `
+                        <span class="icon icon-clock"></span>
+                        OFERTA EXCLUSIVA PCE - ÚLTIMAS HORAS!
+                    `;
+                }
+            });
+            
+            if (timeLeft > 0) {
+                timeLeft--;
+            }
+        }
+        
+        // Atualiza a contagem a cada segundo
+        setInterval(updateCountdown, 1000);
+        updateCountdown(); // Executa imediatamente
+
+        // Adiciona estilo do ripple effect
+        const style = document.createElement('style');
+        style.textContent = `
+            .ripple {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.3);
+                pointer-events: none;
+                transform: scale(0);
+                animation: ripple-animation 0.6s linear;
+                z-index: 0;
+            }
+            
+            @keyframes ripple-animation {
+                to {
+                    transform: scale(2);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
