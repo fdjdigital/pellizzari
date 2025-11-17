@@ -738,6 +738,37 @@ img.member-photo {
     opacity: 0.8;
 }
 
+.footer-legal-info {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* =====================================================
+   LEGAL DISCLAIMER SECTION
+   ===================================================== */
+.legal-disclaimer {
+    background: var(--cinza-claro);
+    border-top: 2px solid var(--dourado-fosco);
+    padding: 2rem 0;
+}
+
+.disclaimer-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.disclaimer-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--cinza-escuro);
+}
+
+.disclaimer-content strong {
+    color: var(--azul-profundo);
+}
+
 /* =====================================================
    RESPONSIVIDADE - TABLET E MOBILE
    ===================================================== */

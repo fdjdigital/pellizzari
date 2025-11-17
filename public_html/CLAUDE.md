@@ -71,9 +71,183 @@ Segunda a Sexta: 09h00 - 18h00
 
 ---
 
-## 4. Padronização de Header e Footer
+## 4. Conformidade Legal e Publicitária (OAB e Google Ads)
 
-### 4.1 Header (Cabeçalho)
+**⚖️ TODAS AS PÁGINAS DO SITE DEVEM ESTAR EM CONFORMIDADE COM:**
+- Provimento nº 205/2021 da OAB (Publicidade na Advocacia)
+- Políticas do Google Ads para Serviços Jurídicos
+- Código de Ética e Disciplina da OAB
+
+### 4.1 Informações Obrigatórias
+
+**Estas informações DEVEM aparecer em TODAS as páginas do site:**
+
+#### CNPJ e Razão Social
+```
+Razão Social: Medina Serviços Ltda
+CNPJ: 09.069.850/0001-10
+```
+**Localização:** Rodapé do site (footer)
+
+#### Credenciais OAB dos Advogados
+```
+Reginaldo Pellizzari - OAB/SP 240.274
+Viviane Pellizzari - OAB/SP 188.272
+```
+**Localização:** Sempre que mencionar os advogados (seção equipe, sobre, etc.)
+
+### 4.2 Disclaimer Legal Obrigatório
+
+**TODA página do site DEVE conter o seguinte aviso legal antes do footer:**
+
+```html
+<!-- Legal Disclaimer Section -->
+<section class="legal-disclaimer section">
+    <div class="container">
+        <div class="disclaimer-content">
+            <p><strong>⚖️ AVISO LEGAL:</strong> As informações contidas neste site são de caráter meramente informativo e não constituem aconselhamento jurídico. O contato inicial através deste site não estabelece relação advogado-cliente. Para orientação específica sobre sua situação, é necessário consultar um advogado diretamente.</p>
+        </div>
+    </div>
+</section>
+```
+
+**Posicionamento:** Imediatamente antes da tag `</main>` e antes do `<footer>`
+
+### 4.3 Regras de Linguagem - Provimento 205/2021 da OAB
+
+#### ❌ PROIBIDO - Linguagem NÃO Permitida:
+
+**Promessas de Resultados:**
+- ❌ "Transformamos complexidade em vantagem competitiva"
+- ❌ "Garantimos resultados excepcionais"
+- ❌ "Transformamos desafios em oportunidades"
+- ❌ "Reduzimos sua carga tributária em X%"
+- ❌ Qualquer garantia implícita ou explícita de resultado
+
+**Linguagem Promocional/Captação:**
+- ❌ "Especialista em transformar..."
+- ❌ "Melhores resultados do mercado"
+- ❌ "Soluções que garantem..."
+- ❌ "Ofertas especiais" ou "promoções"
+- ❌ Linguagem de marketing agressivo
+- ❌ Captação ativa de clientes
+
+**Superlativos Exagerados:**
+- ❌ "O melhor escritório..."
+- ❌ "Resultados excepcionais garantidos"
+- ❌ "Expertise incomparável"
+
+#### ✅ PERMITIDO - Linguagem Adequada:
+
+**Informativa e Descritiva:**
+- ✅ "Advocacia empresarial especializada"
+- ✅ "Assessoria jurídica qualificada"
+- ✅ "Atendimento em direito tributário e empresarial"
+- ✅ "Escritório com experiência em..."
+- ✅ "Advogado com atuação em..."
+
+**Experiência e Credenciais:**
+- ✅ "Mais de X anos de experiência"
+- ✅ "Advogado inscrito na OAB/SP nº..."
+- ✅ "Atuação especializada em..."
+- ✅ "Consultoria jurídica preventiva"
+
+**Áreas de Atuação:**
+- ✅ "Planejamento tributário"
+- ✅ "Direito empresarial"
+- ✅ "Compliance e LGPD"
+- ✅ "Consultoria trabalhista"
+
+### 4.4 Depoimentos de Clientes
+
+**Regras obrigatórias para depoimentos:**
+- ✅ Identificação completa (nome e empresa/cargo)
+- ✅ Consentimento por escrito do cliente
+- ❌ Depoimentos genéricos ("CEO, Indústria de Alimentos")
+- ❌ Depoimentos inventados ou sem identificação
+
+**Recomendação:** Em caso de dúvida, REMOVER o depoimento completamente.
+
+### 4.5 Casos de Sucesso / Clientes Atendidos
+
+**Título da Seção:**
+- ✅ "Clientes Atendidos"
+- ✅ "Empresas Assessoradas"
+- ❌ "Casos de Sucesso" (evitar para não parecer promessa)
+
+**Descrição:**
+- ✅ "Empresas e grupos familiares assessorados pelo escritório"
+- ❌ "Resultados que demonstram nossa expertise"
+
+### 4.6 Checklist de Conformidade OAB/Google Ads
+
+**Antes de publicar QUALQUER página, verificar:**
+
+- [ ] CNPJ e Razão Social estão visíveis no rodapé
+- [ ] OAB dos advogados está visível onde mencionados
+- [ ] Disclaimer legal está presente antes do footer
+- [ ] Linguagem é informativa (não promocional)
+- [ ] Não há promessas ou garantias de resultados
+- [ ] Não há superlativos exagerados
+- [ ] Depoimentos estão com identificação completa (ou removidos)
+- [ ] Títulos de seções seguem a linguagem permitida
+- [ ] Meta description não contém promessas
+- [ ] Não há ofertas, promoções ou "urgência" artificial
+
+### 4.7 Exemplo de Estrutura HTML Conforme
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pellizzari Advocacia Estratégica | [Nome da Página]</title>
+    <meta name="description" content="Advocacia empresarial especializada em [área]. Atendimento qualificado em São Paulo.">
+    <!-- Google Tag Manager -->
+    <!-- CSS e Fontes -->
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Navegação padrão -->
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Conteúdo da página -->
+        <!-- SEMPRE usar linguagem informativa, não promocional -->
+    </main>
+
+        <!-- Legal Disclaimer Section - OBRIGATÓRIO -->
+        <section class="legal-disclaimer section">
+            <div class="container">
+                <div class="disclaimer-content">
+                    <p><strong>⚖️ AVISO LEGAL:</strong> As informações contidas neste site são de caráter meramente informativo e não constituem aconselhamento jurídico. O contato inicial através deste site não estabelece relação advogado-cliente. Para orientação específica sobre sua situação, é necessário consultar um advogado diretamente.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Conteúdo do footer -->
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.</p>
+                <p class="footer-legal-info">Razão Social: Medina Serviços Ltda | CNPJ: 09.069.850/0001-10</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+```
+
+---
+
+## 5. Padronização de Header e Footer
+
+### 5.1 Header (Cabeçalho)
 
 **O cabeçalho deve ser idêntico em todas as páginas do site.**
 
@@ -103,23 +277,24 @@ Deve conter os mesmos links da navegação principal, mais:
 - Botão "Entrar em contato (WhatsApp)"
 - Link para Blog
 
-### 4.2 Footer (Rodapé)
+### 5.2 Footer (Rodapé)
 
 **O rodapé deve ser idêntico em todas as páginas do site.**
 
 Componentes obrigatórios:
 - Logo da Pellizzari
-- Descrição: "Transformando complexidade jurídica em vantagem competitiva para empresários visionários."
+- Descrição: "Advocacia empresarial especializada em planejamento tributário, direito empresarial e compliance."
 - Ícones de redes sociais (Instagram e WhatsApp em SVG)
 - Links de navegação
 - Links legais (Política de Privacidade e Termos de Uso)
 - Copyright: "© [ano atual] Pellizzari Advocacia Estratégica. Todos os direitos reservados."
+- **Informações legais obrigatórias:** "Razão Social: Medina Serviços Ltda | CNPJ: 09.069.850/0001-10"
 
 ---
 
-## 5. Sistema de Cores - Identidade Visual
+## 6. Sistema de Cores - Identidade Visual
 
-### 5.1 Paleta de Cores Oficial
+### 6.1 Paleta de Cores Oficial
 
 ```css
 :root {
@@ -135,7 +310,7 @@ Componentes obrigatórios:
 }
 ```
 
-### 5.2 Uso das Cores
+### 6.2 Uso das Cores
 
 **Azul Profundo (#001527):**
 - Títulos principais
@@ -171,7 +346,7 @@ Componentes obrigatórios:
 - Parágrafos
 - Conteúdo geral
 
-### 5.3 Gradientes
+### 6.3 Gradientes
 
 ```css
 /* Hero Section */
@@ -180,9 +355,9 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 
 ---
 
-## 6. Tipografia
+## 7. Tipografia
 
-### 6.1 Fontes Utilizadas
+### 7.1 Fontes Utilizadas
 
 ```css
 :root {
@@ -198,7 +373,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 ```
 
-### 6.2 Hierarquia Tipográfica
+### 7.2 Hierarquia Tipográfica
 
 **Títulos Principais (H1):**
 - Fonte: Playfair Display
@@ -230,7 +405,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 - Peso: 600 (Semi-bold)
 - Cor: var(--dourado-fosco)
 
-### 6.3 Tamanhos de Fonte
+### 7.3 Tamanhos de Fonte
 
 ```css
 :root {
@@ -244,9 +419,9 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 
 ---
 
-## 7. Layout e Espaçamento
+## 8. Layout e Espaçamento
 
-### 7.1 Sistema de Espaçamento
+### 8.1 Sistema de Espaçamento
 
 ```css
 :root {
@@ -260,7 +435,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 }
 ```
 
-### 7.2 Breakpoints Responsivos
+### 8.2 Breakpoints Responsivos
 
 ```css
 /* Mobile First Approach */
@@ -277,7 +452,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 @media (min-width: 1440px) { }
 ```
 
-### 7.3 Container
+### 8.3 Container
 
 ```css
 .container {
@@ -287,7 +462,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 }
 ```
 
-### 7.4 Bordas e Arredondamentos
+### 8.4 Bordas e Arredondamentos
 
 ```css
 :root {
@@ -300,7 +475,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 }
 ```
 
-### 7.5 Sombras
+### 8.5 Sombras
 
 ```css
 :root {
@@ -314,9 +489,9 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 
 ---
 
-## 8. Botões e Call-to-Actions
+## 9. Botões e Call-to-Actions
 
-### 8.1 Botão WhatsApp Principal
+### 9.1 Botão WhatsApp Principal
 
 **Características:**
 - Background: var(--dourado-fosco) ou gradiente sutil
@@ -333,7 +508,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 - Transform: translateY(-3px)
 - Box-shadow aumentada
 
-### 8.2 Botões Primários
+### 9.2 Botões Primários
 
 ```css
 .btn-primary {
@@ -352,7 +527,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 }
 ```
 
-### 8.3 Botões Secundários
+### 9.3 Botões Secundários
 
 ```css
 .btn-secondary {
@@ -373,9 +548,9 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 
 ---
 
-## 9. Seção de Clientes
+## 10. Seção de Clientes
 
-### 9.1 Layout
+### 10.1 Layout
 
 **Disposição:** Grid fixo (não carrossel)
 
@@ -388,7 +563,7 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 - cliente-econ-pellizzari-advocacia-estrategica.webp
 - cliente-dayco-pellizzari-advocacia-tributaria.webp
 
-### 9.2 Estilização
+### 10.2 Estilização
 
 ```css
 .clients-grid {
@@ -417,9 +592,9 @@ background: linear-gradient(135deg, var(--azul-profundo) 0%, #002a4d 100%);
 
 ---
 
-## 10. URLs e Navegação
+## 11. URLs e Navegação
 
-### 10.1 Estrutura de URLs Limpas
+### 11.1 Estrutura de URLs Limpas
 
 **Todas as URLs devem ser limpas, sem extensão .html**
 
@@ -438,7 +613,7 @@ Estrutura de diretórios:
 /blog/planejamento-tributario/ → blog/planejamento-tributario/index.html
 ```
 
-### 10.2 Links Internos
+### 11.2 Links Internos
 
 **Formato correto:**
 ```html
@@ -455,9 +630,9 @@ Estrutura de diretórios:
 
 ---
 
-## 11. Ícones de Redes Sociais
+## 12. Ícones de Redes Sociais
 
-### 11.1 SVGs Personalizados
+### 12.1 SVGs Personalizados
 
 **Localização:**
 - `/images/instagram-icon.svg`
@@ -469,7 +644,7 @@ Estrutura de diretórios:
 - Background: Dourado fosco com bordas arredondadas
 - Ícone: Azul profundo
 
-### 11.2 Uso
+### 12.2 Uso
 
 ```html
 <div class="social-links">
@@ -484,16 +659,16 @@ Estrutura de diretórios:
 
 ---
 
-## 12. Arquitetura CSS e JavaScript
+## 13. Arquitetura CSS e JavaScript
 
-### 12.1 Centralização de Código
+### 13.1 Centralização de Código
 
 **Todos os estilos e scripts devem estar centralizados:**
 
 - **CSS:** `public_html/css/style.css`
 - **JavaScript:** `public_html/js/main.js`
 
-### 12.2 Proibições Absolutas
+### 13.2 Proibições Absolutas
 
 ❌ **NÃO é permitido:**
 - CSS inline (atributo `style=""`)
@@ -510,9 +685,9 @@ Estrutura de diretórios:
 
 ---
 
-## 13. Transições e Animações
+## 14. Transições e Animações
 
-### 13.1 Transições Padrão
+### 14.1 Transições Padrão
 
 ```css
 :root {
@@ -522,7 +697,7 @@ Estrutura de diretórios:
 }
 ```
 
-### 13.2 Animações de Entrada
+### 14.2 Animações de Entrada
 
 ```css
 @keyframes fadeInUp {
@@ -541,7 +716,7 @@ Estrutura de diretórios:
 }
 ```
 
-### 13.3 Scroll Animations
+### 14.3 Scroll Animations
 
 ```javascript
 // Intersection Observer para animar seções ao rolar
@@ -568,16 +743,16 @@ sections.forEach(section => {
 
 ---
 
-## 14. Acessibilidade
+## 15. Acessibilidade
 
-### 14.1 Atributos Obrigatórios
+### 15.1 Atributos Obrigatórios
 
 - Todas as imagens devem ter `alt` descritivo
 - Botões devem ter `aria-label` quando necessário
 - Links devem ser descritivos
 - Contraste de cores adequado (WCAG AA)
 
-### 14.2 Navegação por Teclado
+### 15.2 Navegação por Teclado
 
 - Todos os elementos interativos devem ser acessíveis por teclado
 - Ordem lógica de tabulação
@@ -585,9 +760,9 @@ sections.forEach(section => {
 
 ---
 
-## 15. Performance
+## 16. Performance
 
-### 15.1 Otimizações Obrigatórias
+### 16.1 Otimizações Obrigatórias
 
 - Imagens em formato WebP
 - Lazy loading de imagens
@@ -595,7 +770,7 @@ sections.forEach(section => {
 - Compressão de imagens
 - Código limpo e eficiente
 
-### 15.2 Google Tag Manager
+### 16.2 Google Tag Manager
 
 **ID:** GTM-TSLFGWZB
 
@@ -612,10 +787,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 ---
 
-## 16. Checklist de Qualidade
+## 17. Checklist de Qualidade
 
 Antes de considerar qualquer desenvolvimento como "concluído", verificar:
 
+**Técnico:**
 - [ ] Header e footer idênticos em todas as páginas
 - [ ] CSS e JS centralizados (sem código inline)
 - [ ] Variáveis CSS configuradas no `:root`
@@ -634,17 +810,29 @@ Antes de considerar qualquer desenvolvimento como "concluído", verificar:
 - [ ] Google Tag Manager configurado
 - [ ] Todos os arquivos salvos e organizados
 
+**Conformidade Legal OAB/Google Ads:**
+- [ ] CNPJ e Razão Social visíveis no rodapé
+- [ ] OAB dos advogados visível onde mencionados (Reginaldo: 240.274 / Viviane: 188.272)
+- [ ] Disclaimer legal presente antes do footer
+- [ ] Linguagem informativa (sem promessas de resultados)
+- [ ] Sem superlativos exagerados ou garantias
+- [ ] Sem linguagem promocional ou captação ativa
+- [ ] Depoimentos com identificação completa ou removidos
+- [ ] Títulos de seções em linguagem neutra
+- [ ] Meta description sem promessas
+- [ ] Sem ofertas, promoções ou urgência artificial
+
 ---
 
-## 17. Manutenção e Atualizações
+## 18. Manutenção e Atualizações
 
-### 17.1 Alterações de Cores
+### 18.1 Alterações de Cores
 
 Para alterar cores do site:
 1. Edite APENAS as variáveis no `:root` do `style.css`
 2. NUNCA altere valores diretamente nas classes CSS
 
-### 17.2 Novos Conteúdos
+### 18.2 Novos Conteúdos
 
 Ao adicionar novas páginas:
 1. Siga a estrutura de URLs limpas (diretório/index.html)
@@ -652,7 +840,7 @@ Ao adicionar novas páginas:
 3. Referencie `style.css` e `main.js`
 4. Mantenha a identidade visual consistente
 
-### 17.3 Blog
+### 18.3 Blog
 
 Novos artigos de blog devem:
 1. Estar em `/blog/slug-do-artigo/index.html`
@@ -663,10 +851,10 @@ Novos artigos de blog devem:
 
 ---
 
-## 18. Informações Técnicas
+## 19. Informações Técnicas
 
-**Última atualização:** 24 de outubro de 2025
-**Versão:** 2.0
+**Última atualização:** 17 de novembro de 2025
+**Versão:** 3.0 (Adicionada seção de Conformidade Legal OAB/Google Ads)
 **Responsável:** Claude (IA Assistant)
 
 ---
