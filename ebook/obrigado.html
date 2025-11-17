@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Obrigado por baixar o E-book de Gestão Trabalhista - Próximos passos e como a Pellizzari pode ajudar sua empresa">
+    <title>Obrigado pelo Download! | Pellizzari Advocacia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .success-icon {
+            text-align: center;
+            font-size: 5em;
+            margin-bottom: 20px;
+        }
+
+        .proximos-passos-lista {
+            max-width: 800px;
+            margin: 0 auto;
+            counter-reset: step-counter;
+        }
+
+        .passo-item {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            border-left: 5px solid #2a5298;
+            position: relative;
+            padding-left: 80px;
+        }
+
+        .passo-item::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .passo-item h3 {
+            color: #1e3c72;
+            font-size: 1.4em;
+            margin-bottom: 10px;
+        }
+
+        .passo-item p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .servicos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .servico-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .servico-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .servico-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .servico-card h3 {
+            color: #1e3c72;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .servico-card p {
+            font-size: 1.05em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .diagnostico-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 5px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .diagnostico-box h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+        }
+
+        .diagnostico-box p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .diagnostico-box ul {
+            text-align: left;
+            max-width: 600px;
+            margin: 30px auto;
+            list-style: none;
+            padding: 0;
+        }
+
+        .diagnostico-box ul li {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .diagnostico-box ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #4caf50;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .cta-button-white {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 20px 50px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 50px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 20px;
+        }
+
+        .cta-button-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .redes-sociais {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            font-size: 1.5em;
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .social-link i {
+            font-size: 1.3em;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.3);
+        }
+
+        .social-link.instagram { color: #E4405F; }
+        .social-link.whatsapp { color: #25D366; }
+
+        @media (max-width: 768px) {
+            .passo-item {
+                padding-left: 20px;
+                padding-top: 70px;
+            }
+
+            .passo-item::before {
+                left: 50%;
+                top: 20px;
+                transform: translateX(-50%);
+            }
+
+            .diagnostico-box {
+                padding: 30px 20px;
+            }
+
+            .diagnostico-box h2 {
+                font-size: 1.6em;
+            }
+
+            .redes-sociais {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Confirmação -->
+    <header>
+        <div class="container">
+            <div class="success-icon">✅</div>
+            <h1>Parabéns! Seu E-book Está a Caminho</h1>
+            <h2>Em breve você receberá o material completo no e-mail cadastrado. Enquanto isso, descubra como transformar esse conhecimento em ação.</h2>
+        </div>
+    </header>
+
+    <!-- Próximos Passos -->
+    <section class="conteudo">
+        <div class="container">
+            <h2>🎯 Próximos Passos para Implementação</h2>
+            <div class="proximos-passos-lista">
+                <div class="passo-item">
+                    <h3>Verifique seu e-mail</h3>
+                    <p>O e-book será enviado em instantes. Não esqueça de verificar a caixa de spam ou promoções caso não encontre na caixa de entrada principal.</p>
+                </div>
+
+                <div class="passo-item">
+                    <h3>Faça uma leitura estratégica</h3>
+                    <p>Comece pelos capítulos que mais se aplicam à sua realidade atual. Identifique os pontos críticos que sua empresa precisa ajustar com urgência.</p>
+                </div>
+
+                <div class="passo-item">
+                    <h3>Realize um diagnóstico interno</h3>
+                    <p>Use os checklists e materiais complementares para mapear os riscos trabalhistas da sua operação. Liste as não conformidades encontradas.</p>
+                </div>
+
+                <div class="passo-item">
+                    <h3>Planeje a implementação</h3>
+                    <p>Priorize as ações preventivas que terão maior impacto na redução de passivos e multas. Defina prazos e responsáveis para cada ajuste.</p>
+                </div>
+
+                <div class="passo-item">
+                    <h3>Conte com apoio especializado</h3>
+                    <p>Se identificar complexidades ou precisar de suporte jurídico para implementar as mudanças, nossa equipe está pronta para ajudar. Agende um diagnóstico personalizado abaixo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apresentação Pellizzari -->
+    <section class="para-quem">
+        <div class="container">
+            <h2>Conheça a Pellizzari Advocacia Estratégica</h2>
+            <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 50px; color: white;">
+                Há mais de 25 anos, ajudamos empresários a transformar desafios jurídicos em oportunidades de crescimento através de uma advocacia consultiva, preventiva e estratégica.
+            </p>
+
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">⚖️</div>
+                    <h3>Direito Trabalhista Preventivo</h3>
+                    <p>Estruturação de políticas, contratos e processos para reduzir passivos trabalhistas e garantir conformidade legal.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">🏢</div>
+                    <h3>Estruturação Societária</h3>
+                    <p>Governança corporativa, planejamento sucessório e reorganizações empresariais para proteger seu patrimônio.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">📋</div>
+                    <h3>Compliance e LGPD</h3>
+                    <p>Implementação de programas de conformidade e adequação à Lei Geral de Proteção de Dados.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">📄</div>
+                    <h3>Contratos Estratégicos</h3>
+                    <p>Elaboração e revisão de contratos que protegem seus interesses e previnem litígios futuros.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">🛡️</div>
+                    <h3>Blindagem Patrimonial</h3>
+                    <p>Estratégias para proteger o patrimônio pessoal dos sócios contra riscos empresariais.</p>
+                </div>
+
+                <div class="servico-card">
+                    <div class="servico-icon">🎓</div>
+                    <h3>Consultoria Jurídica In Company</h3>
+                    <p>Departamento jurídico externo para empresas que buscam segurança jurídica contínua.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Diagnóstico -->
+    <section class="beneficios">
+        <div class="container">
+            <div class="diagnostico-box">
+                <h2>🔍 Agende Seu Diagnóstico Gratuito</h2>
+                <p>Identifique os riscos trabalhistas da sua operação e receba um plano personalizado para proteger sua empresa</p>
+
+                <ul>
+                    <li>Análise completa da sua operação com motoristas</li>
+                    <li>Identificação de não conformidades e riscos</li>
+                    <li>Plano de ação prioritário e personalizado</li>
+                    <li>Estimativa de economia com a regularização</li>
+                    <li>Orientações sobre implementação imediata</li>
+                </ul>
+
+                <p style="font-size: 1.1em; margin-top: 30px;"><strong>Sessão de 60 minutos por videoconferência</strong></p>
+
+                <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" class="cta-button-white" target="_blank">AGENDAR DIAGNÓSTICO GRATUITO</a>
+
+                <div class="redes-sociais">
+                    <a href="https://instagram.com/pellizzariadvocacia" class="social-link instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" class="social-link whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="depoimentos">
+        <div class="container">
+            <h2>O Que Dizem Nossos Clientes</h2>
+            <div class="depoimentos-grid">
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"A Pellizzari nos ajudou a estruturar todo o controle de jornada. Reduzimos 80% das autuações e ganhamos segurança jurídica total."</p>
+                    <p class="depoimento-autor">— Gerente de Operações, Transportadora Nacional</p>
+                </div>
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"O trabalho preventivo da equipe evitou que tivéssemos problemas sérios com reconhecimento de vínculo. Economia de centenas de milhares de reais."</p>
+                    <p class="depoimento-autor">— CEO, Empresa de Logística</p>
+                </div>
+                <div class="depoimento-card">
+                    <p class="depoimento-texto">"Profissionalismo, conhecimento técnico e atendimento humanizado. A Pellizzari é nossa parceira estratégica há mais de 5 anos."</p>
+                    <p class="depoimento-autor">— Diretor Jurídico, Grupo de Distribuição</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre a Autora -->
+    <section class="sobre-autora">
+        <div class="container">
+            <h2>👩‍⚖️ Sobre Viviane Pellizzari</h2>
+            <div class="autora-conteudo">
+                <div class="autora-foto">
+                    <img src="images/viviane-pellizzari.png" alt="Viviane Pellizzari - Advogada especialista em Direito Empresarial">
+                </div>
+                <div class="autora-info">
+                    <h3>Viviane Pellizzari</h3>
+                    <p>Advogada com mais de 25 anos de experiência em Direito Empresarial, Viviane Pellizzari dedica sua carreira a auxiliar empresários na estruturação e proteção de seus negócios.</p>
+                    <p>Especialista em advocacia consultiva e preventiva, desenvolveu metodologia própria para identificação de riscos e oportunidades na gestão empresarial, com foco especial em empresas do setor de transporte e logística.</p>
+
+                    <h4>Formação e Especialização:</h4>
+                    <ul>
+                        <li>Graduação em Direito</li>
+                        <li>Pós-graduação em Direito Empresarial</li>
+                        <li>Especialização em Compliance e LGPD</li>
+                        <li>Certificação em Gestão de Riscos Trabalhistas</li>
+                    </ul>
+
+                    <p style="margin-top: 25px;"><strong>Pellizzari Advocacia Estratégica</strong><br>
+                    <em>Transformando desafios jurídicos em oportunidades de crescimento</em></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="problema">
+        <div class="container">
+            <h2>Não Deixe para Depois</h2>
+            <p style="text-align: center; font-size: 1.3em; max-width: 800px; margin: 0 auto 30px; color: #555; line-height: 1.8;">
+                Cada dia sem conformidade trabalhista é um dia de risco para sua empresa. Multas, autuações e ações trabalhistas podem custar centenas de milhares de reais.
+            </p>
+            <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto; color: #1e3c72; font-weight: 600;">
+                Agende agora seu diagnóstico gratuito e descubra como proteger sua operação.
+            </p>
+
+            <div class="cta-section">
+                <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" class="cta-button" target="_blank">FALAR COM ESPECIALISTA AGORA</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="aviso-legal">
+                <h3 style="margin-bottom: 20px;">Pellizzari Advocacia Estratégica</h3>
+
+                <div class="redes-sociais" style="margin-top: 30px;">
+                    <a href="https://instagram.com/pellizzariadvocacia" class="social-link instagram" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" class="social-link whatsapp" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+
+                <p style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
+                    © 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
