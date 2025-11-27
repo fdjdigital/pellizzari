@@ -201,13 +201,23 @@ Viviane Pellizzari - OAB/SP 188.272
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
+    <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pellizzari Advocacia Estratégica | [Nome da Página]</title>
     <meta name="description" content="Advocacia empresarial especializada em [área]. Atendimento qualificado em São Paulo.">
-    <!-- Google Tag Manager -->
     <!-- CSS e Fontes -->
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSLFGWZB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header -->
     <header class="header">
         <!-- Navegação padrão -->
@@ -774,7 +784,14 @@ sections.forEach(section => {
 
 **ID:** GTM-TSLFGWZB
 
-Deve ser incluído em todas as páginas no `<head>`:
+**Status:** ✅ Instalado em todas as páginas do site
+
+O Google Tag Manager deve estar presente em **TODAS as páginas HTML** do site com dois códigos:
+
+#### Código 1 - Script no `<head>`
+
+Deve ser incluído logo após a tag `<meta charset="UTF-8">`:
+
 ```html
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -784,6 +801,49 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
 <!-- End Google Tag Manager -->
 ```
+
+#### Código 2 - Noscript no `<body>`
+
+Deve ser incluído imediatamente após a tag de abertura `<body>`:
+
+```html
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TSLFGWZB"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+```
+
+#### Páginas com GTM Instalado
+
+Todas as páginas do site público já possuem o GTM configurado:
+
+**Páginas Principais:**
+- ✅ `/index.html` (Home)
+- ✅ `/sobre/index.html`
+- ✅ `/areas/index.html`
+- ✅ `/socios/index.html`
+- ✅ `/contato/index.html`
+- ✅ `/politica-privacidade/index.html`
+- ✅ `/termos-uso/index.html`
+
+**Blog:**
+- ✅ `/blog/index.html`
+- ✅ `/blog/multa-qualificada/index.html`
+- ✅ `/blog/juros-icms/index.html`
+- ✅ `/blog/planejamento-tributario/index.html`
+
+**E-book:**
+- ✅ `/ebook/index.html`
+- ✅ `/ebook/obrigado.html`
+
+**Login/Dashboard:**
+- ✅ `/login/index.html`
+- ✅ `/login/geral/index.html`
+- ✅ `/login/trafego-pago/index.html`
+
+#### Regra Importante
+
+**Ao criar qualquer nova página HTML**, você DEVE adicionar ambos os códigos GTM (head e body) seguindo o padrão acima. Nunca publique uma página sem o GTM instalado.
 
 ---
 
