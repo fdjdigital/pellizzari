@@ -1193,7 +1193,7 @@ img.member-photo {
 /* Blog Articles - Responsive */
 @media (max-width: 768px) {
     .article-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .article-meta {
@@ -1212,6 +1212,7 @@ img.member-photo {
 
     .blog-article {
         padding: 2rem 0;
+        padding-top: 120px;
     }
 }
 
@@ -1351,6 +1352,11 @@ img.member-photo {
 
 /* Blog Listing - Responsive */
 @media (max-width: 768px) {
+    .blog-listing {
+        padding: 2rem 0;
+        padding-top: 120px;
+    }
+
     .blog-grid {
         grid-template-columns: 1fr;
         gap: 2rem;

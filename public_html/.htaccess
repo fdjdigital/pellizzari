@@ -1,0 +1,54 @@
+# =====================================================
+# PELLIZZARI ADVOCACIA - CONFIGURAÇÃO DO SERVIDOR
+# =====================================================
+
+# Habilitar RewriteEngine
+RewriteEngine On
+
+# Definir index.html como arquivo padrão
+DirectoryIndex index.html
+
+# Redirecionar URLs com index.html para URLs limpas (301 Permanent)
+# Exemplo: /blog/blindagem-patrimonial/index.html -> /blog/blindagem-patrimonial/
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Permitir acesso a pastas sem index.html na URL
+# O servidor vai servir index.html automaticamente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}index.html -f
+RewriteRule ^(.*)$ $1index.html [L]
+
+# =====================================================
+# SEGURANÇA
+# =====================================================
+
+# Desabilitar listagem de diretórios
+Options -Indexes
+
+# Proteger arquivos sensíveis
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# =====================================================
+# CACHE E PERFORMANCE
+# =====================================================
+
+# Cache de arquivos estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+</IfModule>
+
+# Compressão GZIP
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript text/xml application/xml
+</IfModule>
