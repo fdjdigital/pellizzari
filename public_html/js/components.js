@@ -140,6 +140,40 @@
   }
 
   // ============================================
+  // TABLE OF CONTENTS (auto-generated)
+  // ============================================
+  function initTOC() {
+    var tocNav = document.querySelector('.toc');
+    if (!tocNav) return;
+
+    var content = document.querySelector('.article-content');
+    if (!content) return;
+
+    var headings = content.querySelectorAll('h2');
+    if (headings.length < 2) {
+      tocNav.style.display = 'none';
+      return;
+    }
+
+    var list = document.createElement('ol');
+    list.className = 'toc__list';
+
+    headings.forEach(function (h2, i) {
+      var id = 'secao-' + (i + 1);
+      h2.id = id;
+
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + id;
+      a.textContent = h2.textContent;
+      li.appendChild(a);
+      list.appendChild(li);
+    });
+
+    tocNav.appendChild(list);
+  }
+
+  // ============================================
   // INIT
   // ============================================
   function init() {
@@ -148,6 +182,7 @@
     initSmoothAnchors();
     initWhatsAppTracking();
     initCopyright();
+    initTOC();
   }
 
   if (document.readyState === 'loading') {
