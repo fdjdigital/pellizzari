@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="80" fill="#001527"/>
+  <g transform="translate(96, 64)">
+    <!-- P grande (branco) — haste vertical + base em L + barriga -->
+    <path d="
+      M0 384
+      V0
+      h160
+      c56 0 92 36 92 84
+      s-36 84-92 84
+      H56
+      V384
+      H200
+      V328
+      H56
+      V168
+      h104
+      c28 0 48-20 48-48
+      s-20-48-48-48
+      H56
+      v312
+      H0
+      z
+    " fill="#ffffff" fill-rule="evenodd" opacity="0"/>
+
+    <!-- P grande (branco) — simplificado -->
+    <!-- Haste vertical -->
+    <rect x="0" y="0" width="56" height="384" fill="#ffffff"/>
+    <!-- Base horizontal (L) -->
+    <rect x="0" y="328" width="200" height="56" fill="#ffffff"/>
+    <!-- Barriga superior -->
+    <path d="M56 0 h96 c52 0 84 32 84 80 s-32 80-84 80 H56 V0z" fill="#ffffff"/>
+
+    <!-- P pequeno (dourado) — deslocado à direita -->
+    <!-- Haste vertical -->
+    <rect x="128" y="56" width="44" height="272" fill="#B6A281"/>
+    <!-- Barriga superior -->
+    <path d="M172 56 h64 c42 0 68 26 68 64 s-26 64-68 64 H172 V56z" fill="#B6A281"/>
+  </g>
+</svg>

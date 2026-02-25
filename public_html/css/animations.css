@@ -1,0 +1,336 @@
+/* ===================================================
+   ANIMATIONS.CSS — Keyframes & Animation States
+   Reveals, shimmer, border-beam, blur-fade, blob-morph,
+   gradient-text, marquee, clip-path
+   Pellizzari Advocacia Estratégica v3.0
+   =================================================== */
+
+/* ============ Base Reveal States ============ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(40px);
+  will-change: opacity, transform;
+}
+
+[data-reveal="left"] {
+  transform: translateX(-60px);
+}
+
+[data-reveal="right"] {
+  transform: translateX(60px);
+}
+
+[data-reveal="scale"] {
+  transform: scale(0.85);
+}
+
+[data-reveal="none"] {
+  transform: none;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============ Stagger Children ============ */
+[data-stagger-child] {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+
+[data-stagger-child].is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
+/* ============ Counter ============ */
+[data-count-to] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============ Hero Blob Morphing ============ */
+.hero-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-blob-1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(182, 162, 129, 0.25), transparent 70%);
+  top: -10%;
+  right: -10%;
+  animation: blob-morph 15s ease-in-out infinite;
+}
+
+.hero-blob-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(182, 162, 129, 0.15), transparent 70%);
+  bottom: -10%;
+  left: -10%;
+  animation: blob-morph 20s ease-in-out infinite reverse;
+}
+
+@keyframes blob-morph {
+  0%, 100% {
+    border-radius: 50%;
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    border-radius: 40% 60% 55% 45%;
+    transform: translate(20px, -15px) scale(1.05);
+  }
+  50% {
+    border-radius: 55% 45% 40% 60%;
+    transform: translate(-10px, 20px) scale(0.95);
+  }
+  75% {
+    border-radius: 45% 55% 60% 40%;
+    transform: translate(15px, 10px) scale(1.02);
+  }
+}
+
+/* ============ Blur Fade ============ */
+[data-blur-fade] {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(12px);
+  transition: opacity 0.8s var(--ease-out-expo),
+              filter 0.8s var(--ease-out-expo),
+              transform 0.8s var(--ease-out-expo);
+}
+
+[data-blur-fade].is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* ============ Shimmer Effect ============ */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  animation: shimmer-sweep 4s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer-sweep {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* ============ Button Shimmer ============ */
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: btn-shimmer-sweep 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes btn-shimmer-sweep {
+  0% { left: -100%; }
+  40% { left: 100%; }
+  100% { left: 100%; }
+}
+
+/* ============ Border Beam ============ */
+.border-beam {
+  position: relative;
+}
+
+.border-beam::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--beam-angle, 0deg),
+    transparent 70%,
+    var(--dourado-fosco) 85%,
+    transparent 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box,
+                linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam-rotate 4s linear infinite;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.border-beam:hover::before {
+  opacity: 1;
+}
+
+@keyframes beam-rotate {
+  to { --beam-angle: 360deg; }
+}
+
+@property --beam-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+/* ============ Gradient Text (Static) ============ */
+.gradient-text {
+  background: linear-gradient(135deg, var(--dourado-fosco), #d4c4a8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ============ Clip-Path Reveal ============ */
+[data-clip-reveal] {
+  clip-path: inset(10% 0 10% 0);
+  transition: clip-path 1.2s var(--ease-out-expo);
+}
+
+[data-clip-reveal].is-revealed {
+  clip-path: inset(0 0 0 0);
+}
+
+/* ============ Scroll Indicator ============ */
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 3rem;
+  opacity: 0.6;
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+.scroll-indicator__text {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--branco);
+}
+
+.scroll-indicator__arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2px solid var(--branco);
+  border-bottom: 2px solid var(--branco);
+  transform: rotate(45deg);
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* ============ Reading Progress Bar ============ */
+.reading-progress {
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--dourado-fosco), #d4c4a8);
+  z-index: 999;
+  transform-origin: left;
+  transform: scaleX(0);
+  width: 100%;
+  transition: none;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 768px) {
+  .hero-blob {
+    display: none;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* ============ Reduced Motion ============ */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-stagger-child] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [data-blur-fade] {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  [data-clip-reveal] {
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .hero-blob,
+  .shimmer::after,
+  .btn-shimmer::before,
+  .border-beam::before {
+    animation: none !important;
+  }
+
+  .hero-blob {
+    display: none;
+  }
+
+  .scroll-indicator {
+    animation: none !important;
+  }
+
+  .gradient-text {
+    -webkit-text-fill-color: var(--dourado-fosco);
+    background: none;
+  }
+
+  .marquee__track {
+    animation: none !important;
+  }
+
+  .reading-progress {
+    transition: transform 0.1s linear !important;
+  }
+}

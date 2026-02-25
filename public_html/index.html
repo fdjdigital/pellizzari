@@ -10,12 +10,18 @@
     })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pellizzari Advocacia Estratégica | Advocacia para Empresários Visionários</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="images/favicon.ico" sizes="any">    <title>Pellizzari Advocacia Estratégica | Advocacia para Empresários Visionários</title>
     <meta name="description" content="Advocacia empresarial especializada em planejamento tributário, direito empresarial e compliance. Atendimento qualificado para empresas em São Paulo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css?v=20241215">
+    <link rel="preload" href="css/core.css" as="style">
+    <link rel="preload" href="images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" as="image" type="image/webp">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -28,7 +34,7 @@
         <div class="container">
             <div class="header-content">
                 <a href="https://pellizzariadvocacia.com">
-                    <img src="images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="logo">
+                    <img src="images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="logo" width="300" height="300" fetchpriority="high">
                 </a>
 
                 <nav>
@@ -51,17 +57,23 @@
     <main>
         <!-- Hero Section -->
         <section id="inicio" class="hero">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1>Advocacia Empresarial Especializada</h1>
-                    <p class="subtitle">Assessoria jurídica qualificada em planejamento tributário, direito empresarial e compliance</p>
-                    <p class="description">
+                    <p class="subtitle" data-blur-fade="0.2">Assessoria jurídica qualificada em planejamento tributário, direito empresarial e compliance</p>
+                    <p class="description" data-blur-fade="0.4">
                         Oferecemos consultoria jurídica especializada para empresas, com foco em planejamento preventivo,
                         proteção patrimonial e adequação à legislação vigente.
                     </p>
-                    <div class="hero-buttons">
-                        <a href="areas/index.html" class="btn-primary">Conheça Nossas Soluções</a>
+                    <div class="hero-buttons" data-blur-fade="0.6">
+                        <a href="areas/index.html" class="btn-primary btn-shimmer">Conheça Nossas Soluções</a>
                         <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" target="_blank" class="btn-secondary">Agende uma Consulta</a>
+                    </div>
+                    <div class="scroll-indicator">
+                        <span class="scroll-indicator__text">Scroll</span>
+                        <span class="scroll-indicator__arrow"></span>
                     </div>
                 </div>
             </div>
@@ -71,27 +83,27 @@
         <section id="sobre" class="about section">
             <div class="container">
                 <div class="about-content">
-                    <div class="about-text">
+                    <div class="about-text" data-reveal="left">
                         <h2>Por Que Escolher a Pellizzari Advocacia Estratégica?</h2>
                         <p>
                             Escritório de advocacia com atuação especializada em direito empresarial, oferecendo
                             assessoria jurídica preventiva e consultiva para empresas de diversos segmentos.
                         </p>
 
-                        <div class="differentials">
-                            <div class="differential-item">
+                        <div class="differentials" data-stagger-parent>
+                            <div class="differential-item" data-stagger-child>
                                 <h4>🎯 Visão Estratégica</h4>
                                 <p>Antecipamos riscos com clareza e planejamento, oferecendo consultoria preventiva.</p>
                             </div>
-                            <div class="differential-item">
+                            <div class="differential-item" data-stagger-child>
                                 <h4>⚖️ Experiência Sólida</h4>
                                 <p>Mais de 25 anos somados de prática jurídica empresarial especializada.</p>
                             </div>
-                            <div class="differential-item">
+                            <div class="differential-item" data-stagger-child>
                                 <h4>🔒 Proteção Integral</h4>
                                 <p>Especialistas em blindagem patrimonial e estruturação societária.</p>
                             </div>
-                            <div class="differential-item">
+                            <div class="differential-item" data-stagger-child>
                                 <h4>💼 Parceria Estratégica</h4>
                                 <p>Atuamos como parceiros do seu negócio para crescimento sustentável.</p>
                             </div>
@@ -99,7 +111,12 @@
                     </div>
 
                     <div class="about-image">
-                        <img src="images/pellizzari-advocacia-estrategica-25-anos-experiencia-selo.webp" alt="Mais de 25 anos de experiência" class="experience-badge">
+                        <div class="experience-badge" data-reveal="scale">
+                            <span class="experience-badge__number">+25</span>
+                            <span class="experience-badge__label">anos de experiência</span>
+                            <span class="experience-badge__divider"></span>
+                            <span class="experience-badge__firm">Pellizzari</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,13 +125,13 @@
         <!-- Specialties Section -->
         <section id="especialidades" class="specialties section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Nossas Especialidades</h2>
                     <p>Soluções jurídicas estratégicas para impulsionar o crescimento da sua empresa</p>
                 </div>
 
-                <div class="specialties-grid">
-                    <div class="specialty-card">
+                <div class="specialties-grid" data-stagger-parent>
+                    <div class="specialty-card border-beam" data-stagger-child>
                         <h3>Planejamento Tributário Estratégico</h3>
                         <ul>
                             <li>Consultoria Tributária</li>
@@ -127,7 +144,7 @@
                         </ul>
                     </div>
 
-                    <div class="specialty-card">
+                    <div class="specialty-card border-beam" data-stagger-child>
                         <h3>Direito Empresarial e Consultivo</h3>
                         <ul>
                             <li>Constituição e reorganização de empresas</li>
@@ -140,7 +157,7 @@
                         </ul>
                     </div>
 
-                    <div class="specialty-card">
+                    <div class="specialty-card border-beam" data-stagger-child>
                         <h3>Direito Trabalhista Estratégico</h3>
                         <ul>
                             <li>Auditoria Trabalhista Preventiva</li>
@@ -153,7 +170,7 @@
                         </ul>
                     </div>
 
-                    <div class="specialty-card">
+                    <div class="specialty-card border-beam" data-stagger-child>
                         <h3>Compliance e Proteção de Dados</h3>
                         <ul>
                             <li>Implantação de programas de compliance</li>
@@ -172,14 +189,14 @@
         <!-- Team Section -->
         <section id="equipe" class="team section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Sócios</h2>
                     <p>Profissionais experientes dedicados ao seu sucesso</p>
                 </div>
 
-                <div class="team-grid">
-                    <div class="team-member">
-                        <img src="images/reginaldo-pellizzari-contador-advogado-tributarista-sao-paulo.webp" alt="Reginaldo Pellizzari" class="member-photo">
+                <div class="team-grid" data-stagger-parent>
+                    <div class="team-member" data-stagger-child>
+                        <img src="images/reginaldo-pellizzari-contador-advogado-tributarista-sao-paulo.webp" alt="Reginaldo Pellizzari" class="member-photo" width="500" height="500" loading="lazy">
                         <h3 class="member-name">Reginaldo Pellizzari</h3>
                         <p class="member-title">Advogado - OAB/SP 240.274</p>
                         <p class="member-description">
@@ -187,16 +204,16 @@
                             Atua na consultoria jurídica tributária para empresas, orientando sobre legislação
                             fiscal e alternativas legais de otimização tributária.
                         </p>
-                        <ul class="member-specialties">
-                            <li>Consultoria Tributária Estratégica</li>
-                            <li>Planejamento e Otimização Fiscal</li>
-                            <li>Revisão Fiscal e Recuperação de Créditos</li>
-                            <li>Monitoramento Legislativo Especializado</li>
+                        <ul class="member-specialties" data-stagger-parent>
+                            <li data-stagger-child>Consultoria Tributária Estratégica</li>
+                            <li data-stagger-child>Planejamento e Otimização Fiscal</li>
+                            <li data-stagger-child>Revisão Fiscal e Recuperação de Créditos</li>
+                            <li data-stagger-child>Monitoramento Legislativo Especializado</li>
                         </ul>
                     </div>
 
-                    <div class="team-member">
-                        <img src="images/viviane-pellizzari-advogada-empresarial-trabalhista-sao-paulo.webp" alt="Viviane Pellizzari" class="member-photo">
+                    <div class="team-member" data-stagger-child>
+                        <img src="images/viviane-pellizzari-advogada-empresarial-trabalhista-sao-paulo.webp" alt="Viviane Pellizzari" class="member-photo" width="500" height="500" loading="lazy">
                         <h3 class="member-name">Viviane Pellizzari</h3>
                         <p class="member-title">Advogada - OAB/SP 188.272</p>
                         <p class="member-description">
@@ -204,13 +221,13 @@
                             jurídica para empresas nas áreas de contratos, compliance e adequação trabalhista.
                             Atua na consultoria preventiva e estruturação jurídica de negócios.
                         </p>
-                        <ul class="member-specialties">
-                            <li>Constituição e reorganização de empresas</li>
-                            <li>Elaboração e revisão de contratos comerciais</li>
-                            <li>Implantação de governança e compliance</li>
-                            <li>Auditoria Trabalhista Preventiva</li>
-                            <li>Adequação à LGPD e proteção de dados</li>
-                            <li>Consultoria preventiva personalizada</li>
+                        <ul class="member-specialties" data-stagger-parent>
+                            <li data-stagger-child>Constituição e reorganização de empresas</li>
+                            <li data-stagger-child>Elaboração e revisão de contratos comerciais</li>
+                            <li data-stagger-child>Implantação de governança e compliance</li>
+                            <li data-stagger-child>Auditoria Trabalhista Preventiva</li>
+                            <li data-stagger-child>Adequação à LGPD e proteção de dados</li>
+                            <li data-stagger-child>Consultoria preventiva personalizada</li>
                         </ul>
                     </div>
                 </div>
@@ -220,32 +237,32 @@
         <!-- Results Section -->
         <section id="resultados" class="results section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Clientes Atendidos</h2>
                     <p>Empresas e grupos familiares assessorados pelo escritório</p>
                 </div>
 
-                <div class="results-grid">
-                    <div class="result-card">
-                        <img src="images/cliente-familia-pozzoli-pellizzari-blindagem-patrimonial.webp" alt="Família Pozzoli" class="result-logo">
+                <div class="results-grid" data-stagger-parent>
+                    <div class="result-card shimmer" data-stagger-child>
+                        <img src="images/cliente-familia-pozzoli-pellizzari-blindagem-patrimonial.webp" alt="Família Pozzoli" class="result-logo" width="360" height="360" loading="lazy">
                         <h3>Família Pozzoli</h3>
                         <p>Reestruturação, organização e proteção patrimonial; Venda de ativos para a Fundação Lia Maria Aguiar (Bradesco).</p>
                     </div>
 
-                    <div class="result-card">
-                        <img src="images/cliente-nytron-pellizzari-advocacia-tecnologia.webp" alt="Grupos Nytron" class="result-logo">
+                    <div class="result-card shimmer" data-stagger-child>
+                        <img src="images/cliente-nytron-pellizzari-advocacia-tecnologia.webp" alt="Grupos Nytron" class="result-logo" width="200" height="200" loading="lazy">
                         <h3>Grupos Nytron e Dayco Power</h3>
                         <p>Due Diligence completa; Realinhamento e saneamento de passivo trabalhista e tributário; Elaboração e análise contratual; Fusão, aquisição e planejamento fiscal.</p>
                     </div>
 
-                    <div class="result-card">
-                        <img src="images/cliente-wolf-hacker-pellizzari-advocacia-construcao.webp" alt="Família Wolf Hacker" class="result-logo">
+                    <div class="result-card shimmer" data-stagger-child>
+                        <img src="images/cliente-wolf-hacker-pellizzari-advocacia-construcao.webp" alt="Família Wolf Hacker" class="result-logo" width="360" height="125" loading="lazy">
                         <h3>Família Wolf Hacker</h3>
                         <p>Assessoria na incorporação de bens e direitos; Planejamento fiscal e proteção patrimonial; Venda de ativo à ECON Construtora.</p>
                     </div>
 
-                    <div class="result-card">
-                        <img src="images/cliente-grupo-autostar-pellizzari-consultoria-empresarial.webp" alt="Grupo Auto Star" class="result-logo">
+                    <div class="result-card shimmer" data-stagger-child>
+                        <img src="images/cliente-grupo-autostar-pellizzari-consultoria-empresarial.webp" alt="Grupo Auto Star" class="result-logo" width="600" height="130" loading="lazy">
                         <h3>Grupo Auto Star</h3>
                         <p>Reestruturação societária e planejamento fiscal; Criação de holdings patrimoniais para sucessão e proteção.</p>
                     </div>
@@ -253,65 +270,61 @@
             </div>
         </section>
 
-        <!-- Clients Section - Grid Fixo -->
+        <!-- Clients Section — Marquee -->
         <section class="clients-section section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Empresas que Confiam em Nosso Trabalho</h2>
                     <p>Parcerias estratégicas que geram resultados concretos</p>
                 </div>
+            </div>
 
-                <div class="clients-grid">
-                    <div class="client-card">
-                        <img src="images/cliente-nytron-pellizzari-advocacia-tecnologia.webp" alt="Nytron" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-wolf-hacker-pellizzari-advocacia-construcao.webp" alt="Wolf Hacker" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-grupo-autostar-pellizzari-consultoria-empresarial.webp" alt="Grupo Auto Star" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-fundacao-lia-maria-aguiar-pellizzari-terceiro-setor.webp" alt="Fundação Lia Maria Aguiar" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-familia-pozzoli-pellizzari-blindagem-patrimonial.webp" alt="Família Pozzoli" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-econ-pellizzari-advocacia-estrategica.webp" alt="Econ Construtora" class="client-logo">
-                    </div>
-                    <div class="client-card">
-                        <img src="images/cliente-dayco-pellizzari-advocacia-tributaria.webp" alt="Dayco Power" class="client-logo">
-                    </div>
+            <div class="marquee">
+                <div class="marquee__track">
+                    <img src="images/cliente-nytron-pellizzari-advocacia-tecnologia.webp" alt="Nytron" class="client-logo" loading="lazy" width="200" height="200">
+                    <img src="images/cliente-wolf-hacker-pellizzari-advocacia-construcao.webp" alt="Wolf Hacker" class="client-logo" loading="lazy" width="360" height="125">
+                    <img src="images/cliente-grupo-autostar-pellizzari-consultoria-empresarial.webp" alt="Grupo Auto Star" class="client-logo" loading="lazy" width="600" height="130">
+                    <img src="images/cliente-fundacao-lia-maria-aguiar-pellizzari-terceiro-setor.webp" alt="Fundação Lia Maria Aguiar" class="client-logo" loading="lazy" width="360" height="231">
+                    <img src="images/cliente-familia-pozzoli-pellizzari-blindagem-patrimonial.webp" alt="Família Pozzoli" class="client-logo" loading="lazy" width="360" height="360">
+                    <img src="images/cliente-econ-pellizzari-advocacia-estrategica.webp" alt="Econ Construtora" class="client-logo" loading="lazy" width="360" height="85">
+                    <img src="images/cliente-dayco-pellizzari-advocacia-tributaria.webp" alt="Dayco Power" class="client-logo" loading="lazy" width="360" height="189">
+                    <!-- Duplicated for seamless loop -->
+                    <img src="images/cliente-nytron-pellizzari-advocacia-tecnologia.webp" alt="Nytron" class="client-logo" loading="lazy" width="200" height="200">
+                    <img src="images/cliente-wolf-hacker-pellizzari-advocacia-construcao.webp" alt="Wolf Hacker" class="client-logo" loading="lazy" width="360" height="125">
+                    <img src="images/cliente-grupo-autostar-pellizzari-consultoria-empresarial.webp" alt="Grupo Auto Star" class="client-logo" loading="lazy" width="600" height="130">
+                    <img src="images/cliente-fundacao-lia-maria-aguiar-pellizzari-terceiro-setor.webp" alt="Fundação Lia Maria Aguiar" class="client-logo" loading="lazy" width="360" height="231">
+                    <img src="images/cliente-familia-pozzoli-pellizzari-blindagem-patrimonial.webp" alt="Família Pozzoli" class="client-logo" loading="lazy" width="360" height="360">
+                    <img src="images/cliente-econ-pellizzari-advocacia-estrategica.webp" alt="Econ Construtora" class="client-logo" loading="lazy" width="360" height="85">
+                    <img src="images/cliente-dayco-pellizzari-advocacia-tributaria.webp" alt="Dayco Power" class="client-logo" loading="lazy" width="360" height="189">
                 </div>
             </div>
         </section>
 
         <!-- Contact Info Section -->
-        <section id="contato" class="contact-info-section section">
+        <section id="contato" class="contact-info-section section" data-clip-reveal>
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Fale Conosco</h2>
                     <p>Entre em contato para mais informações sobre nossos serviços jurídicos</p>
                 </div>
 
                 <div class="contact-info-content">
-                    <div class="contact-info-grid">
-                        <div class="info-item">
+                    <div class="contact-info-grid" data-stagger-parent>
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">📍</span>
                             <p>Rua Borges de Figueiredo 303, Cjto 804 - Átrio Giorno - Mooca - São Paulo CEP 03110-010</p>
                         </div>
-                        <div class="info-item">
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">📞</span>
                             <p><a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" class="phone-link" target="_blank">(31) 99976-7916</a></p>
                         </div>
-                        <div class="info-item">
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">⏰</span>
                             <p>Segunda a Sexta: 09h00 - 18h00</p>
                         </div>
                     </div>
-                    <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" target="_blank" class="whatsapp-btn-styled">
-                        <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon-inline">
+                    <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" target="_blank" class="whatsapp-btn-styled btn-shimmer">
+                        <img src="images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon-inline" width="24" height="24">
                         Fale Conosco pelo WhatsApp
                     </a>
                 </div>
@@ -333,16 +346,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-about">
-                    <img src="images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="footer-logo">
+                    <img src="images/pellizzari-advocacia-estrategica-logo-sao-paulo.webp" alt="Pellizzari Advocacia Estratégica" class="footer-logo" width="300" height="300" loading="lazy">
                     <p class="footer-description">
                         Advocacia empresarial especializada em planejamento tributário, direito empresarial e compliance.
                     </p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/pellizzariadvocacia/" target="_blank" aria-label="Instagram">
-                            <img src="images/instagram-icon.svg" alt="Instagram Pellizzari Advocacia">
+                            <img src="images/instagram-icon.svg" alt="Instagram Pellizzari Advocacia" width="40" height="40" loading="lazy">
                         </a>
                         <a href="https://wa.me/5531999767916?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pellizzari" target="_blank" aria-label="WhatsApp">
-                            <img src="images/whatsapp-icon.svg" alt="WhatsApp Pellizzari Advocacia">
+                            <img src="images/whatsapp-icon.svg" alt="WhatsApp Pellizzari Advocacia" width="40" height="40" loading="lazy">
                         </a>
                     </div>
                 </div>
@@ -371,10 +384,18 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.</p>
                 <p class="footer-legal-info">Razão Social: Medina Serviços Ltda | CNPJ: 09.069.850/0001-10</p>
-            </div>
+                <p class="footer-credit">Desenvolvido por <a href="https://vanttmkt.com" target="_blank" rel="noopener">vanttmkt.com</a></p>            </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <!-- CDN Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <!-- App Scripts -->
+    <script src="js/core.js" defer></script>
+    <script src="js/components.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

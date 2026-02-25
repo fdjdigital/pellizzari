@@ -10,12 +10,15 @@
     })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sócios | Pellizzari Advocacia Estratégica</title>
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon.ico" sizes="any">    <title>Sócios | Pellizzari Advocacia Estratégica</title>
     <meta name="description" content="Conheça os sócios da Pellizzari Advocacia: Reginaldo Pellizzari e Viviane Pellizzari. Especialistas em planejamento tributário e direito empresarial.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=20241215">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -50,10 +53,12 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1>Nossos Sócios</h1>
-                    <p class="subtitle">Profissionais experientes dedicados ao seu sucesso</p>
+                    <p class="subtitle" data-blur-fade="0.2">Profissionais experientes dedicados ao seu sucesso</p>
                     <p class="description">
                         Conheça os especialistas que lideram a Pellizzari Advocacia Estratégica
                         e transformam desafios jurídicos em vantagens competitivas.
@@ -65,8 +70,8 @@
         <!-- Team Section -->
         <section class="team section">
             <div class="container">
-                <div class="team-grid">
-                    <div class="team-member">
+                <div class="team-grid" data-stagger-parent>
+                    <div class="team-member" data-stagger-child>
                         <img src="../images/reginaldo-pellizzari-contador-advogado-tributarista-sao-paulo.webp" alt="Reginaldo Pellizzari" class="member-photo">
                         <h3 class="member-name">Reginaldo Pellizzari</h3>
                         <p class="member-title">Advogado - Especialista em Planejamento Tributário Estratégico</p>
@@ -79,17 +84,17 @@
                             Reginaldo possui formação multidisciplinar que combina conhecimentos em contabilidade e direito,
                             permitindo uma visão 360° das questões tributárias e empresariais.
                         </p>
-                        <ul class="member-specialties">
-                            <li>Consultoria Tributária Estratégica</li>
-                            <li>Planejamento e Otimização Fiscal</li>
-                            <li>Revisão Fiscal e Recuperação de Créditos</li>
-                            <li>Monitoramento Legislativo Especializado</li>
-                            <li>Blindagem Patrimonial</li>
-                            <li>Reestruturação Societária</li>
+                        <ul class="member-specialties" data-stagger-parent>
+                            <li data-stagger-child>Consultoria Tributária Estratégica</li>
+                            <li data-stagger-child>Planejamento e Otimização Fiscal</li>
+                            <li data-stagger-child>Revisão Fiscal e Recuperação de Créditos</li>
+                            <li data-stagger-child>Monitoramento Legislativo Especializado</li>
+                            <li data-stagger-child>Blindagem Patrimonial</li>
+                            <li data-stagger-child>Reestruturação Societária</li>
                         </ul>
                     </div>
 
-                    <div class="team-member">
+                    <div class="team-member" data-stagger-child>
                         <img src="../images/viviane-pellizzari-advogada-empresarial-trabalhista-sao-paulo.webp" alt="Viviane Pellizzari" class="member-photo">
                         <h3 class="member-name">Viviane Pellizzari</h3>
                         <p class="member-title">Advogada Empresarial e Consultiva</p>
@@ -102,14 +107,14 @@
                             Viviane possui expertise em direito empresarial, trabalhista e compliance, com ampla
                             experiência em governança corporativa e adequação à LGPD.
                         </p>
-                        <ul class="member-specialties">
-                            <li>Constituição e reorganização de empresas</li>
-                            <li>Elaboração e revisão de contratos comerciais</li>
-                            <li>Implantação de governança e compliance</li>
-                            <li>Auditoria Trabalhista Preventiva</li>
-                            <li>Adequação à LGPD e proteção de dados</li>
-                            <li>Consultoria preventiva personalizada</li>
-                            <li>Fusões e Aquisições</li>
+                        <ul class="member-specialties" data-stagger-parent>
+                            <li data-stagger-child>Constituição e reorganização de empresas</li>
+                            <li data-stagger-child>Elaboração e revisão de contratos comerciais</li>
+                            <li data-stagger-child>Implantação de governança e compliance</li>
+                            <li data-stagger-child>Auditoria Trabalhista Preventiva</li>
+                            <li data-stagger-child>Adequação à LGPD e proteção de dados</li>
+                            <li data-stagger-child>Consultoria preventiva personalizada</li>
+                            <li data-stagger-child>Fusões e Aquisições</li>
                         </ul>
                     </div>
                 </div>
@@ -119,13 +124,13 @@
         <!-- Approach Section -->
         <section class="about section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Nossa Abordagem</h2>
                     <p>Como trabalhamos para garantir o sucesso dos nossos clientes</p>
                 </div>
 
                 <div class="about-content">
-                    <div class="about-text">
+                    <div class="about-text" data-reveal="left">
                         <p>
                             Na Pellizzari Advocacia Estratégica, acreditamos que o direito deve ser uma ferramenta
                             de crescimento, não apenas de proteção. Nossa abordagem combina expertise técnica com
@@ -139,7 +144,12 @@
                     </div>
 
                     <div class="about-image">
-                        <img src="../images/pellizzari-advocacia-estrategica-25-anos-experiencia-selo.webp" alt="Mais de 25 anos de experiência" class="experience-badge" style="margin-bottom: 6rem;">
+                        <div class="experience-badge" data-reveal="scale">
+                            <span class="experience-badge__number">+25</span>
+                            <span class="experience-badge__label">anos de experiência</span>
+                            <span class="experience-badge__divider"></span>
+                            <span class="experience-badge__firm">Pellizzari</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -201,10 +211,19 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenvolvido por <a href="https://vanttmkt.com" target="_blank" rel="noopener">vanttmkt.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <!-- CDN Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <!-- App Scripts -->
+    <script src="../js/core.js" defer></script>
+    <script src="../js/components.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

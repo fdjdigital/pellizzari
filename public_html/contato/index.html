@@ -10,12 +10,15 @@
     })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato | Pellizzari Advocacia Estratégica</title>
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon.ico" sizes="any">    <title>Contato | Pellizzari Advocacia Estratégica</title>
     <meta name="description" content="Entre em contato com a Pellizzari Advocacia Estratégica. Telefone e WhatsApp (31) 99976-7916. Atendimento em São Paulo.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=20241215">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -50,10 +53,12 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
+            <div class="hero-blob hero-blob-1"></div>
+            <div class="hero-blob hero-blob-2"></div>
             <div class="container">
                 <div class="hero-content">
                     <h1>Entre em Contato</h1>
-                    <p class="subtitle">Transforme seus desafios jurídicos em oportunidades de crescimento</p>
+                    <p class="subtitle" data-blur-fade="0.2">Transforme seus desafios jurídicos em oportunidades de crescimento</p>
                     <p class="description">
                         Nossa equipe está pronta para atender você e oferecer soluções jurídicas estratégicas
                         personalizadas para o seu negócio.
@@ -65,14 +70,14 @@
         <!-- Contact Info Section -->
         <section class="contact-info-section section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Nossas Informações de Contato</h2>
                     <p>Escolha o canal de sua preferência para falar conosco</p>
                 </div>
 
                 <div class="contact-info-content">
-                    <div class="contact-info-grid">
-                        <div class="info-item">
+                    <div class="contact-info-grid" data-stagger-parent>
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">📍</span>
                             <div>
                                 <strong>Endereço</strong>
@@ -83,7 +88,7 @@
                             </div>
                         </div>
 
-                        <div class="info-item">
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">📞</span>
                             <div>
                                 <strong>Telefone / WhatsApp</strong>
@@ -91,7 +96,7 @@
                             </div>
                         </div>
 
-                        <div class="info-item">
+                        <div class="info-item" data-stagger-child>
                             <span class="info-icon">⏰</span>
                             <div>
                                 <strong>Horário de Atendimento</strong>
@@ -110,7 +115,7 @@
         <!-- Map Section -->
         <section class="about section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Nossa Localização</h2>
                     <p>Estamos estrategicamente localizados na região da Mooca, em São Paulo</p>
                 </div>
@@ -132,25 +137,25 @@
         <!-- Why Contact Section -->
         <section class="specialties section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h2>Por Que Entrar em Contato?</h2>
                     <p>Veja como podemos ajudar sua empresa</p>
                 </div>
 
-                <div class="differentials">
-                    <div class="differential-item">
+                <div class="differentials" data-stagger-parent>
+                    <div class="differential-item" data-stagger-child>
                         <h4>📋 Consultoria Inicial Gratuita</h4>
                         <p>Primeira análise da sua situação sem custos, para entendermos como podemos ajudar.</p>
                     </div>
-                    <div class="differential-item">
+                    <div class="differential-item" data-stagger-child>
                         <h4>⚡ Resposta Rápida</h4>
                         <p>Retornamos seu contato em até 24 horas úteis.</p>
                     </div>
-                    <div class="differential-item">
+                    <div class="differential-item" data-stagger-child>
                         <h4>🎯 Soluções Personalizadas</h4>
                         <p>Cada empresa é única e merece uma estratégia jurídica sob medida.</p>
                     </div>
-                    <div class="differential-item">
+                    <div class="differential-item" data-stagger-child>
                         <h4>🤝 Atendimento Humanizado</h4>
                         <p>Falamos a linguagem do empresário, sem juridiquês desnecessário.</p>
                     </div>
@@ -212,10 +217,19 @@
 
             <div class="footer-bottom">
                 <p>&copy; 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.</p>
+                <p class="footer-credit">Desenvolvido por <a href="https://vanttmkt.com" target="_blank" rel="noopener">vanttmkt.com</a></p>
             </div>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <!-- CDN Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <!-- App Scripts -->
+    <script src="../js/core.js" defer></script>
+    <script src="../js/components.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>

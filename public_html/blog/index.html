@@ -10,12 +10,15 @@
     })(window,document,'script','dataLayer','GTM-TSLFGWZB');</script>
     <!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Pellizzari Advocacia Estratégica</title>
+    <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="../images/favicon.ico" sizes="any">    <title>Blog | Pellizzari Advocacia Estratégica</title>
     <meta name="description" content="Artigos especializados sobre planejamento tributário, direito empresarial e estratégias jurídicas para empresários visionários.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css?v=20241215">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/core.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
     <!-- Google Tag Manager (noscript) -->
@@ -51,14 +54,14 @@
     <main>
         <section class="blog-listing section">
             <div class="container">
-                <div class="section-title">
+                <div class="section-title" data-reveal>
                     <h1>Blog Pellizzari</h1>
-                    <p>Artigos especializados sobre planejamento tributário, direito empresarial e estratégias jurídicas</p>
+                    <p data-blur-fade>Artigos especializados sobre planejamento tributário, direito empresarial e estratégias jurídicas</p>
                 </div>
 
-                <div class="blog-grid">
+                <div class="blog-grid" data-stagger-parent>
                     <!-- Article: LGPD para Empresas -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Compliance</div>
                             <h2 class="blog-card-title">
@@ -78,7 +81,7 @@
                     </article>
 
                     <!-- Article: Planejamento Societário -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Direito Societário</div>
                             <h2 class="blog-card-title">
@@ -98,7 +101,7 @@
                     </article>
 
                     <!-- Article: Faturamento e Segurança Jurídica -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Gestão Empresarial</div>
                             <h2 class="blog-card-title">
@@ -118,7 +121,7 @@
                     </article>
 
                     <!-- Article: Blindagem Patrimonial -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Proteção Patrimonial</div>
                             <h2 class="blog-card-title">
@@ -138,7 +141,7 @@
                     </article>
 
                     <!-- Article: Planejamento Tributário -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Planejamento Tributário</div>
                             <h2 class="blog-card-title">
@@ -158,7 +161,7 @@
                     </article>
 
                     <!-- Article 2: ICMS Juros -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Direito Tributário</div>
                             <h2 class="blog-card-title">
@@ -178,7 +181,7 @@
                     </article>
 
                     <!-- Article 3: Multa Qualificada -->
-                    <article class="blog-card">
+                    <article class="blog-card" data-stagger-child>
                         <div class="blog-card-content">
                             <div class="blog-category">Direito Tributário</div>
                             <h2 class="blog-card-title">
@@ -199,10 +202,10 @@
                 </div>
 
                 <!-- CTA Section -->
-                <div class="blog-cta">
+                <div class="blog-cta" data-reveal>
                     <h3>Precisa de assessoria jurídica especializada?</h3>
                     <p>Entre em contato conosco e descubra como podemos ajudar sua empresa a crescer com segurança jurídica.</p>
-                    <a href="https://wa.me/5531999767916?text=Vim%20pelo%20site%20da%20Pellizzari" target="_blank" class="whatsapp-btn-styled">
+                    <a href="https://wa.me/5531999767916?text=Vim%20pelo%20site%20da%20Pellizzari" target="_blank" class="whatsapp-btn-styled btn-shimmer">
                         <img src="../images/whatsapp-icon.svg" alt="WhatsApp" class="whatsapp-icon-inline">
                         Fale Conosco pelo WhatsApp
                     </a>
@@ -254,10 +257,18 @@
             <div class="footer-bottom">
                 <p>&copy; 2025 Pellizzari Advocacia Estratégica. Todos os direitos reservados.</p>
                 <p class="footer-legal-info">Razão Social: Medina Serviços Ltda | CNPJ: 09.069.850/0001-10</p>
-            </div>
+                <p class="footer-credit">Desenvolvido por <a href="https://vanttmkt.com" target="_blank" rel="noopener">vanttmkt.com</a></p>            </div>
         </div>
     </footer>
 
-    <script src="../js/main.js"></script>
+    <!-- CDN Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <!-- App Scripts -->
+    <script src="../js/core.js" defer></script>
+    <script src="../js/components.js" defer></script>
+    <script src="../js/animations.js" defer></script>
+    <script src="../js/main.js" defer></script>
 </body>
 </html>
