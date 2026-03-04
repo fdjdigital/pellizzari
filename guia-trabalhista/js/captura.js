@@ -387,5 +387,13 @@
                 pushEvent('cta_click', { location: 'obrigado_whatsapp' });
             });
         }
+
+        // ---- BLOQUEIO PAGE: SHARE TRACKING ----
+        var bloqueioEnviar = document.querySelector('.js-bloqueio-enviar');
+        if (bloqueioEnviar) {
+            bloqueioEnviar.addEventListener('click', function () {
+                pushEvent('cta_click', { location: 'bloqueio_enviar_gestor' });
+            });
+        }
     });
 })();
