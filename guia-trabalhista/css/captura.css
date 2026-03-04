@@ -466,11 +466,14 @@ a {
     margin: 0 auto;
 }
 
-.autora__foto {
+img.autora__foto {
     width: 64px;
+    min-width: 64px;
     height: 64px;
+    max-width: 64px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center top;
     flex-shrink: 0;
 }
 
