@@ -1,0 +1,721 @@
+/* ========================================
+   VARIÁVEIS CSS - PELLIZZARI BRAND
+   ======================================== */
+:root {
+    /* Cores Principais */
+    --azul-profundo: #001527;
+    --dourado-fosco: #B6A281;
+    --branco: #ffffff;
+
+    /* Cores Neutras */
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #6c757d;
+    --cinza-escuro: #343a40;
+
+    /* Fontes */
+    --fonte-principal: 'Inter', sans-serif;
+    --fonte-display: 'Playfair Display', serif;
+    --fonte-secundaria: 'Libre Baskerville', serif;
+
+    /* Espaçamento */
+    --espacamento-xs: 8px;
+    --espacamento-sm: 16px;
+    --espacamento-md: 24px;
+    --espacamento-lg: 32px;
+    --espacamento-xl: 48px;
+
+    /* Bordas */
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+
+    /* Sombras */
+    --sombra-leve: 0 4px 12px rgba(0, 21, 39, 0.08);
+    --sombra-media: 0 8px 24px rgba(0, 21, 39, 0.12);
+    --sombra-forte: 0 16px 48px rgba(0, 21, 39, 0.16);
+    --sombra-hover: 0 20px 60px rgba(0, 21, 39, 0.2);
+
+    /* Gradientes */
+    --gradiente-azul: linear-gradient(135deg, #001527 0%, #002a4d 100%);
+    --gradiente-dourado: linear-gradient(135deg, #B6A281 0%, #d4c4a8 100%);
+}
+
+/* ========================================
+   RESET E BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background: var(--gradiente-azul);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ========================================
+   FUNDO E PARTÍCULAS
+   ======================================== */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(182, 162, 129, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(182, 162, 129, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particles {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--dourado-fosco);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 15s infinite ease-in-out;
+}
+
+.particle:nth-child(1) {
+    top: 10%;
+    left: 20%;
+    animation-delay: 0s;
+    animation-duration: 12s;
+}
+
+.particle:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+.particle:nth-child(3) {
+    top: 40%;
+    left: 10%;
+    animation-delay: 4s;
+    animation-duration: 15s;
+}
+
+.particle:nth-child(4) {
+    top: 80%;
+    left: 70%;
+    animation-delay: 1s;
+    animation-duration: 20s;
+}
+
+.particle:nth-child(5) {
+    top: 20%;
+    left: 50%;
+    animation-delay: 3s;
+    animation-duration: 16s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-30px) translateX(20px);
+        opacity: 0.6;
+    }
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL
+   ======================================== */
+.card-container {
+    position: relative;
+    z-index: 10;
+    max-width: 480px;
+    width: 100%;
+    animation: slideInUp 0.8s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   BUSINESS CARD
+   ======================================== */
+.business-card {
+    background: var(--branco);
+    border-radius: var(--border-radius-xl);
+    box-shadow: var(--sombra-forte);
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.business-card:hover {
+    box-shadow: var(--sombra-hover);
+    transform: translateY(-4px);
+}
+
+/* ========================================
+   HEADER DO CARD
+   ======================================== */
+.card-header {
+    background: var(--gradiente-azul);
+    padding: var(--espacamento-xl) var(--espacamento-md);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(182, 162, 129, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Foto de Perfil */
+.profile-image-wrapper {
+    margin-bottom: var(--espacamento-md);
+    animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.profile-image {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--dourado-fosco);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2;
+}
+
+.profile-border {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    right: -8px;
+    bottom: -8px;
+    border-radius: 50%;
+    border: 2px solid var(--dourado-fosco);
+    opacity: 0.5;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+/* Informações do Header */
+.header-info {
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+.name {
+    font-family: var(--fonte-display);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--branco);
+    margin-bottom: var(--espacamento-xs);
+    letter-spacing: 0.5px;
+}
+
+.oab {
+    font-size: 0.95rem;
+    color: var(--dourado-fosco);
+    font-weight: 600;
+    margin-bottom: var(--espacamento-md);
+    letter-spacing: 1px;
+}
+
+.divider {
+    width: 60px;
+    height: 2px;
+    background: var(--dourado-fosco);
+    margin: var(--espacamento-md) auto;
+    border-radius: 2px;
+}
+
+.title {
+    font-size: 1.1rem;
+    color: var(--branco);
+    font-weight: 600;
+    margin-bottom: var(--espacamento-xs);
+}
+
+.specialty {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+}
+
+/* ========================================
+   BADGE DE DIFERENCIAL
+   ======================================== */
+.badge {
+    background: var(--gradiente-dourado);
+    padding: var(--espacamento-sm) var(--espacamento-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--azul-profundo);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(182, 162, 129, 0.3);
+    animation: fadeIn 1s ease-out 0.7s both;
+}
+
+.badge i {
+    font-size: 1.2rem;
+}
+
+/* ========================================
+   SEÇÕES DE CONTEÚDO
+   ======================================== */
+.contact-section,
+.expertise-section {
+    padding: var(--espacamento-lg) var(--espacamento-md);
+}
+
+.section-title {
+    font-family: var(--fonte-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--azul-profundo);
+    margin-bottom: var(--espacamento-md);
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 3px;
+    background: var(--dourado-fosco);
+    border-radius: 2px;
+}
+
+/* ========================================
+   GRID DE CONTATOS
+   ======================================== */
+.contact-grid {
+    display: grid;
+    gap: var(--espacamento-sm);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: var(--espacamento-sm);
+    padding: var(--espacamento-sm);
+    background: var(--cinza-claro);
+    border-radius: var(--border-radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(182, 162, 129, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.contact-item:hover::before {
+    left: 100%;
+}
+
+.contact-item:hover {
+    background: var(--branco);
+    border-color: var(--dourado-fosco);
+    box-shadow: var(--sombra-leve);
+    transform: translateX(4px);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--azul-profundo);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--branco);
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover i {
+    background: var(--dourado-fosco);
+    color: var(--branco);
+    transform: scale(1.1);
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    color: var(--cinza-medio);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contact-value {
+    font-size: 0.95rem;
+    color: var(--azul-profundo);
+    font-weight: 600;
+}
+
+/* WhatsApp Destaque */
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border-color: #25D366;
+}
+
+.whatsapp-btn i {
+    background: var(--branco);
+    color: #25D366;
+}
+
+.whatsapp-btn .contact-label,
+.whatsapp-btn .contact-value {
+    color: var(--branco);
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+/* ========================================
+   ÁREAS DE EXPERTISE
+   ======================================== */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacamento-sm);
+}
+
+.expertise-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacamento-xs);
+    padding: var(--espacamento-md) var(--espacamento-sm);
+    background: var(--cinza-claro);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.expertise-item:hover {
+    background: var(--branco);
+    border-color: var(--dourado-fosco);
+    box-shadow: var(--sombra-leve);
+    transform: translateY(-4px);
+}
+
+.expertise-item i {
+    font-size: 1.8rem;
+    color: var(--dourado-fosco);
+    transition: all 0.3s ease;
+}
+
+.expertise-item:hover i {
+    color: var(--azul-profundo);
+    transform: scale(1.1);
+}
+
+.expertise-item span {
+    font-size: 0.85rem;
+    color: var(--azul-profundo);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* ========================================
+   CTA SECTION
+   ======================================== */
+.cta-section {
+    padding: var(--espacamento-md);
+    background: linear-gradient(135deg, rgba(182, 162, 129, 0.05) 0%, rgba(182, 162, 129, 0.1) 100%);
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    padding: var(--espacamento-md);
+    background: var(--gradiente-azul);
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: var(--border-radius-lg);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 21, 39, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.cta-button:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.cta-button:hover {
+    background: var(--azul-profundo);
+    box-shadow: 0 12px 32px rgba(0, 21, 39, 0.4);
+    transform: translateY(-2px);
+}
+
+.cta-button i {
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 2;
+}
+
+.cta-button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* ========================================
+   FOOTER DO CARD
+   ======================================== */
+.card-footer {
+    padding: var(--espacamento-lg) var(--espacamento-md);
+    background: var(--cinza-claro);
+    text-align: center;
+    border-top: 2px solid rgba(182, 162, 129, 0.2);
+}
+
+.footer-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: var(--espacamento-sm);
+    opacity: 0.9;
+}
+
+.footer-text {
+    font-size: 0.95rem;
+    color: var(--azul-profundo);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.footer-subtext {
+    font-size: 0.85rem;
+    color: var(--cinza-medio);
+}
+
+/* ========================================
+   BOTÕES DE AÇÃO
+   ======================================== */
+.action-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--espacamento-sm);
+    margin-top: var(--espacamento-md);
+    animation: fadeIn 1s ease-out 1s both;
+}
+
+.save-contact-btn,
+.share-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: var(--espacamento-sm);
+    background: var(--branco);
+    color: var(--azul-profundo);
+    border: 2px solid var(--dourado-fosco);
+    border-radius: var(--border-radius-md);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--sombra-leve);
+}
+
+.save-contact-btn:hover,
+.share-btn:hover {
+    background: var(--dourado-fosco);
+    color: var(--branco);
+    box-shadow: var(--sombra-media);
+    transform: translateY(-2px);
+}
+
+.save-contact-btn i,
+.share-btn i {
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+@media (max-width: 480px) {
+    .name {
+        font-size: 1.6rem;
+    }
+
+    .card-header {
+        padding: var(--espacamento-lg) var(--espacamento-sm);
+    }
+
+    .contact-section,
+    .expertise-section {
+        padding: var(--espacamento-md) var(--espacamento-sm);
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: var(--espacamento-sm);
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: var(--espacamento-sm);
+    }
+}
+
+@media (max-width: 360px) {
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* ========================================
+   IMPRESSÃO
+   ======================================== */
+@media print {
+    body {
+        background: white;
+    }
+
+    .particles,
+    .background-overlay,
+    .action-buttons,
+    .cta-section {
+        display: none;
+    }
+
+    .business-card {
+        box-shadow: none;
+        border: 2px solid var(--cinza-medio);
+    }
+}
