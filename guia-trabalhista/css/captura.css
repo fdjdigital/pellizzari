@@ -168,7 +168,7 @@ a {
     font-weight: 400;
     font-size: 13px;
     color: var(--branco);
-    opacity: 0.5;
+    opacity: 0.7;
 }
 
 .hero__image {
@@ -305,7 +305,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     color: var(--cinza-escuro);
-    opacity: 0.75;
+    opacity: 0.85;
     text-align: center;
     max-width: 650px;
     margin: 0 auto 40px;
@@ -360,7 +360,7 @@ a {
     font-weight: 400;
     font-size: 15px;
     color: var(--cinza-escuro);
-    opacity: 0.6;
+    opacity: 0.75;
     text-align: center;
     font-style: italic;
     max-width: 600px;
@@ -442,7 +442,7 @@ a {
     font-weight: 400;
     font-size: 14px;
     color: var(--cinza-escuro);
-    opacity: 0.5;
+    opacity: 0.7;
     text-align: center;
     font-style: italic;
     max-width: 600px;
@@ -494,7 +494,7 @@ img.autora__foto {
     font-weight: 400;
     font-size: 13px;
     color: var(--cinza-escuro);
-    opacity: 0.6;
+    opacity: 0.75;
     line-height: 1.4;
 }
 
@@ -515,7 +515,7 @@ img.autora__foto {
     font-weight: 400;
     font-size: 16px;
     color: var(--branco);
-    opacity: 0.75;
+    opacity: 0.85;
     text-align: center;
     max-width: 480px;
     margin: 12px auto 32px;
@@ -555,7 +555,7 @@ img.autora__foto {
 
 .form-card__qualifier-sub {
     font-size: 13px;
-    opacity: 0.6;
+    opacity: 0.75;
     margin-top: 4px;
 }
 
@@ -657,7 +657,7 @@ img.autora__foto {
     font-family: var(--fonte-principal);
     font-size: 13px;
     color: var(--cinza-escuro);
-    opacity: 0.45;
+    opacity: 0.65;
 }
 
 .form-network-error {
@@ -736,7 +736,7 @@ img.autora__foto {
     font-weight: 400;
     font-size: 13px;
     color: var(--cinza-escuro);
-    opacity: 0.6;
+    opacity: 0.75;
 }
 
 /* =====================================================
@@ -758,22 +758,22 @@ img.autora__foto {
 }
 
 .footer-legal__disclaimer {
-    opacity: 0.4;
+    opacity: 0.6;
     margin-bottom: 12px;
 }
 
 .footer-legal__dados {
-    opacity: 0.45;
+    opacity: 0.65;
     margin-bottom: 4px;
 }
 
 .footer-legal__advogados {
-    opacity: 0.45;
+    opacity: 0.65;
     margin-bottom: 16px;
 }
 
 .footer-legal__credito {
-    opacity: 0.35;
+    opacity: 0.55;
 }
 
 .footer-legal__credito a {
@@ -884,7 +884,7 @@ img.autora__foto {
     font-weight: 400;
     font-size: 14px;
     color: var(--branco);
-    opacity: 0.5;
+    opacity: 0.7;
     margin-top: 12px;
 }
 
@@ -988,7 +988,7 @@ img.autora__foto {
     font-weight: 400;
     font-size: 14px;
     color: var(--cinza-escuro);
-    opacity: 0.5;
+    opacity: 0.7;
     max-width: 450px;
     margin: 0 auto 20px;
     line-height: 1.5;
