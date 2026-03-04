@@ -131,7 +131,7 @@
             email: 'Verifique o formato do email (ex: nome@empresa.com)',
             whatsapp: 'Informe seu WhatsApp com DDD para receber o guia',
             cargo: 'Selecione seu cargo para receber o material adequado',
-            motoristas: 'Informe o porte da sua operacao'
+            motoristas: 'Informe o porte da sua operação'
         };
 
         function validateField(name) {
@@ -164,7 +164,7 @@
                 field.classList.remove('is-valid');
                 field.classList.add('is-error');
                 if (errorEl) {
-                    errorEl.textContent = errorMessages[name] || 'Campo obrigatorio';
+                    errorEl.textContent = errorMessages[name] || 'Campo obrigatório';
                     errorEl.classList.add('is-visible');
                 }
             }
@@ -324,7 +324,7 @@
             if (!card) return;
             card.innerHTML =
                 '<div class="form-already-sent">' +
-                '<p class="form-already-sent__title">Voce ja solicitou o guia</p>' +
+                '<p class="form-already-sent__title">Você já solicitou o guia</p>' +
                 '<p class="form-already-sent__text">Verifique seu email e WhatsApp. O material foi enviado nos dados informados anteriormente.</p>' +
                 '</div>';
         }
