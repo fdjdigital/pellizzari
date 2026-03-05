@@ -23,6 +23,7 @@
 7. **Imagens WebP** com lazy loading
 8. **Meta Pixel SOMENTE via GTM** — NUNCA inserir codigo do Meta Pixel (fbq, noscript pixel) no HTML. Todo tracking Meta Ads (Pixel base, eventos Lead, Purchase, etc.) deve ser configurado exclusivamente dentro do GTM. No codigo-fonte, usar apenas `dataLayer.push()` para enviar dados ao GTM
 9. **Meta Pixel ID:** 1485457385957624
+10. **Publico-alvo: empresas COM motoristas** — qualquer empresa que tenha motoristas na operacao (distribuicao, entregas, agronegocio, construcao, servicos, varejo com frota, industria, etc.). NUNCA limitar a "empresas de transporte", "transportadoras" ou "setor de transporte". O titulo do ebook e "Gestao Trabalhista para Empresas com Motoristas", nao "de Transporte"
 
 ## Cores Rapidas
 
