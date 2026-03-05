@@ -134,6 +134,14 @@
 - **Tier B:** 5 emails (pula dia 3 e dia 10) + 4 WA
 - **Estrutura:** Webhook → Preparar Dados → Wait → Email/WA → Recover → Wait → ...
 
+## Regras para Workflows N8N (OBRIGATORIO)
+
+1. **Fonte unica de copys:** Os arquivos em `tmp/mensagens/` e `tmp/soap-opera-sequence-emails-ebook.md` sao a fonte de verdade para TODAS as copys de WhatsApp e email. Ao alterar qualquer copy, atualizar PRIMEIRO o arquivo de referencia e DEPOIS o workflow N8N via API
+2. **Nunca reconstruir workflow do zero** — sempre buscar o workflow atual via API (`GET /api/v1/workflows/{id}`), alterar os nodes necessarios e fazer PUT com o JSON completo (incluindo campo `name`)
+3. **Scripts Python sao referencia historica** — os scripts em `tmp/` (criar-workflow-*.py, atualizar-workflow-*.py) serviram para a construcao inicial. Para alteracoes futuras, usar a API N8N diretamente em vez de recriar scripts
+4. **Verificacao pos-alteracao obrigatoria** — apos qualquer PUT em workflow, fazer GET e verificar que as alteracoes foram aplicadas e que o workflow esta `active: true`
+5. **Backup antes de alterar** — salvar o JSON original do workflow em `/tmp/` antes de modificar
+
 ## Sincronizacao com GitHub (OBRIGATORIO)
 
 - **SOMENTE Mateus pode editar este CLAUDE.md**
