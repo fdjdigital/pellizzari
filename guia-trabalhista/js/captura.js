@@ -282,11 +282,14 @@
                         sessionStorage.setItem(SESSION_KEY, '1');
                         pushEvent('form_submit_success', { tier: isBlocked ? 'blocked' : 'qualified' });
 
-                        if (isBlocked) {
-                            window.location.href = '/guia-trabalhista/bloqueio/';
-                        } else {
-                            window.location.href = '/guia-trabalhista/obrigado/';
-                        }
+                        // Delay para GTM/Pixel processar evento antes do redirect
+                        setTimeout(function () {
+                            if (isBlocked) {
+                                window.location.href = '/guia-trabalhista/bloqueio/';
+                            } else {
+                                window.location.href = '/guia-trabalhista/obrigado/';
+                            }
+                        }, 800);
                     } else {
                         throw new Error('Server error: ' + response.status);
                     }
