@@ -200,6 +200,16 @@
             }
         });
 
+        // Validate on change (critical for select elements on mobile)
+        Object.keys(fields).forEach(function (key) {
+            if (fields[key] && fields[key].tagName === 'SELECT') {
+                fields[key].addEventListener('change', function () {
+                    validateField(key);
+                    validateForm();
+                });
+            }
+        });
+
         // Validate on input (for real-time feedback after first blur)
         Object.keys(fields).forEach(function (key) {
             if (fields[key]) {

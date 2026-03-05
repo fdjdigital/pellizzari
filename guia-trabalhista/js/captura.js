@@ -7,7 +7,7 @@
     'use strict';
 
     // ---- CONFIG ----
-    var WEBHOOK_URL = 'https://n8n.vanttmkt.com/webhook/pellizzari-ebook';
+    var WEBHOOK_URL = 'https://n8n.srv1139867.hstgr.cloud/webhook/pellizzari-ebook';
     var SUBMIT_TIMEOUT = 10000; // 10s
     var DEBOUNCE_MS = 300;
     var SESSION_KEY = 'pellizzari_ebook_sent';
@@ -194,6 +194,16 @@
         Object.keys(fields).forEach(function (key) {
             if (fields[key]) {
                 fields[key].addEventListener('blur', function () {
+                    validateField(key);
+                    validateForm();
+                });
+            }
+        });
+
+        // Validate on change (critical for select elements on mobile)
+        Object.keys(fields).forEach(function (key) {
+            if (fields[key] && fields[key].tagName === 'SELECT') {
+                fields[key].addEventListener('change', function () {
                     validateField(key);
                     validateForm();
                 });
