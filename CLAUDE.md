@@ -77,6 +77,33 @@
 - **Client-Token:** F1b19a9719b3d42d7b0a4d4f7c33e9132S
 - **URL base:** https://api.z-api.io/instances/3EB800025498B2EE69CEAE390B3F85C2/token/4C8863D29769B6B2D64B1E48
 
+### SSH Hostinger
+- **Host:** 77.37.127.200
+- **Porta:** 65002
+- **Usuario:** u611605267
+- **Senha:** r!X0mw1aKNqAa#
+- **Dominio:** pellizzariadvocacia.com
+- **public_html:** /home/u611605267/domains/pellizzariadvocacia.com/public_html/
+- **Comando rapido:** `ssh -p 65002 u611605267@77.37.127.200`
+
+### GTM (Google Tag Manager)
+- **Container ID:** GTM-TSLFGWZB
+- **Account ID:** 6306396663
+- **Container Path:** accounts/6306396663/containers/226284670
+- **Workspace:** Default (ID 11)
+- **Meta Pixel ID:** 1485457385957624 (variaveis GTM: "Pixel Facebook" e "Pixel ID")
+- **GA4 ID:** G-32LY8LGJ76
+- **Autorizacao API:** Sempre pelo email marketplacesfdj@gmail.com
+- **Token API:** ~/automacoes/tokens/token_gtm.json (scopes: readonly, edit.containers, edit.containerversions, publish)
+- **Tags ativas:** Pixel PageView, Pixel E-Book, META - Lead, Conversao Google Ads (form), WhatsApp Google Ads (wa.me), GA4, Clarity
+
+### Microsoft Clarity
+- **Projeto ID (slug):** snu1nr1kli
+- **Projeto ID (numerico):** 2910918852437382
+- **Admin:** marketplacesfdj@gmail.com
+- **MCP Server:** clarity-pellizzari
+- **API Token:** eyJhbGciOiJSUzI1NiIsImtpZCI6IjQ4M0FCMDhFNUYwRDMxNjdEOTRFMTQ3M0FEQTk2RTcyRDkwRUYwRkYiLCJ0eXAiOiJKV1QifQ.eyJqdGkiOiJjNDBiMDU4MS1kNzA5LTRiOWMtYjVmZi03OGE5NDg0MjIyNzIiLCJzdWIiOiIyOTEwOTE4ODUyNDM3MzgyIiwic2NvcGUiOiJEYXRhLkV4cG9ydCIsIm5iZiI6MTc3MjcyMTg3MiwiZXhwIjo0OTI2MzIxODcyLCJpYXQiOjE3NzI3MjE4NzIsImlzcyI6ImNsYXJpdHkiLCJhdWQiOiJjbGFyaXR5LmRhdGEtZXhwb3J0ZXIifQ.mEEQK3lS31lJfiMVa2RAYearg-oj1fdGLOjKvnUmF09d6rqY0CfgsqjN6ivSptVsgUtrihWc_aqPHNc4Kodx-hCHVIKBwMo4N6PRLqoyu-XpIX3p2mHuUVzyTaiPxW1aqrmFo5mQYYFqkNsxxcouR2Io4kcZ3U7uynaY15nXzk_813IwycajwMQqlz11rCT7KQboTD82UKGIb8VL3_xlF-CNNyrlag9-YPhBKMBEG2MPAsg9_gkspBhjKEhYt3pebgrCsE0fqobg81Y-WvQyd4oymFm_dhlREsSxpMX_57YGziWCHTnX50DoWLZSQGaTsgJ0eG6XxOyR7Eyvz8gArQ
+
 ### Contatos da Equipe (alertas e testes)
 
 | Nome | Telefone | Email | Papel |
