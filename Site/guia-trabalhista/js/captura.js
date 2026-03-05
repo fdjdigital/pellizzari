@@ -106,7 +106,7 @@
             if (isBlocked) {
                 textEl.textContent = 'ENVIAR PARA MEU GESTOR';
             } else {
-                textEl.textContent = 'ENVIAR E RECEBER MEU GUIA AGORA';
+                textEl.textContent = 'RECEBER MEU GUIA AGORA';
             }
         }
 
