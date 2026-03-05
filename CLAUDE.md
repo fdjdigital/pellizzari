@@ -24,7 +24,8 @@
 8. **Meta Pixel SOMENTE via GTM** — NUNCA inserir codigo do Meta Pixel (fbq, noscript pixel) no HTML. Todo tracking Meta Ads (Pixel base, eventos Lead, Purchase, etc.) deve ser configurado exclusivamente dentro do GTM. No codigo-fonte, usar apenas `dataLayer.push()` para enviar dados ao GTM
 9. **Meta Pixel ID:** 1485457385957624
 10. **Experiencia da Viviane: "25 anos"** — NUNCA usar "25+", "mais de 25 anos" ou qualquer variacao com "mais de". Sempre "25 anos" exato
-11. **Publico-alvo: empresas COM motoristas** — qualquer empresa que tenha motoristas na operacao (distribuicao, entregas, agronegocio, construcao, servicos, varejo com frota, industria, etc.). NUNCA limitar a "empresas de transporte", "transportadoras" ou "setor de transporte". O titulo do ebook e "Gestao Trabalhista para Empresas com Motoristas", nao "de Transporte"
+11. **GTM em paginas de conversao** — paginas de obrigado/confirmacao devem carregar GTM IMEDIATO (sem defer/delay). Paginas de captura podem usar carregamento deferido para performance, mas devem ter delay (~800ms) antes de redirect para o pixel processar
+12. **Publico-alvo: empresas COM motoristas** — qualquer empresa que tenha motoristas na operacao (distribuicao, entregas, agronegocio, construcao, servicos, varejo com frota, industria, etc.). NUNCA limitar a "empresas de transporte", "transportadoras" ou "setor de transporte". O titulo do ebook e "Gestao Trabalhista para Empresas com Motoristas", nao "de Transporte"
 
 ## Cores Rapidas
 
@@ -122,6 +123,7 @@
 - **Webhook:** POST https://n8n.srv1139867.hstgr.cloud/webhook/pellizzari-ebook
 - **Ebook PDF:** https://pellizzariadvocacia.com/ebook/guia-trabalhista.pdf
 - **Tiers:** A (decisor + 5+ motoristas), B (decisor + 1-4), Bloqueio (motorista/outro)
+- **Valores cargo (formulario → N8N):** `dono-socio`, `diretor-gerente`, `rh` = decisor | `motorista`, `outro` = bloqueio. NUNCA alterar esses valores sem atualizar AMBOS (formulario HTML + node Classificar Lead no N8N)
 - **Alertas WhatsApp:** Mateus + Barbara + Viviane (todos os tiers qualificados)
 - **Fluxo:** Webhook → Classificar Lead → Enviar Ebook (Email + WA) → Alertas → Disparar Follow-up
 
